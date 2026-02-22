@@ -260,9 +260,9 @@ const Work = ({ experienceBtnClickedActive }) => {
           </div>{" "}
           <div className="aboutMe inline-block mt-[2px] mb-10 ml-12 text-[#ccd6f6] text-[32px] font-calibri font-semibold antialiased relative z-[1] workScreen5:w-[12.7rem]">
             Where I've Worked
-            <div className="z-[1] w-[20px] inline-block h-[50px] absolute bottom-0 workScreen4:hidden"></div>
+            <div className="z-[1] w-[20px] inline-block h-[50px] absolute bottom-0 workScreen9:hidden"></div>
           </div>
-          <div className="border-[1px] block box-content mb-[5px] ml-[2%] relative bottom-[60px] w-[48%] left-[47%] border-[#303c55] workScreen4:hidden workScreen6:left-[305px] workScreen7:w-[22rem]"></div>
+          <div className="border-[1px] block box-content mb-[5px] ml-[2%] relative bottom-[60px] w-[48%] left-[47%] border-[#303c55] workScreen9:hidden workScreen6:left-[305px] workScreen7:w-[22rem]"></div>
         </div>
         {/* When screen > 500px */}
         <div
@@ -727,7 +727,7 @@ const Work = ({ experienceBtnClickedActive }) => {
                   </div>
                   {/* Mobile underline - slides under active tab */}
                   <div 
-                    className="absolute bottom-0 h-[3px] bg-[#64ffda] transition-all duration-300 ease-in-out"
+                    className="absolute bottom-0 h-[3px] bg-[#64ffda] transition-all duration-300 ease-in-out workScreen9:hidden"
                     style={{
                       left: `${mobileActiveTab * 20}%`,
                       width: 'calc(20% - 2px)',
