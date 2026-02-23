@@ -209,6 +209,8 @@ module.exports = {
       opScreen29: { min: "1146px" },
       opScreen30: { min: "1230px" },
       opScreen31: { min: "1277px" },
+      opScreen32: { max: "360px" },
+      opScreen33: { max: "425px" },
 
       // Get In Touch Screens
       gitScreen1: { min: "700px" },

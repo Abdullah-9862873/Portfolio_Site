@@ -108,9 +108,9 @@ const OtherProjects = () => {
         {/* First Project Box */}
         <div
           ref={refFirstProject}
-          className={`contentContainer ${
+          className={`contentContainer otherProjectBox ${
             firstProjectVisible ? "show" : ""
-          } w-[48%] relative py-8 px-7 rounded bg-[#172a45] mt-4 transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration top-0 opScreen6:w-[32%] opScreen7:w-[48%] opScreen9:w-[31%] opScreen13:w-[100%]`}
+          } w-[48%] relative py-8 px-7 rounded bg-[#172a45] mt-4 transition-all duration-250 ease-in-out top-0 opScreen6:w-[32%] opScreen7:w-[48%] opScreen9:w-[31%] opScreen13:w-[100%]`}
         >
           {/* Header Box */}
           <div className="w-[100%] h-10 bg-[#172a45] flex justify-between items-center">
@@ -159,11 +159,11 @@ const OtherProjects = () => {
             </div>
           </div>
           {/* Title  */}
-          <div className="h-[20%] mt-8 bg-[#172a45] antialiased text-[#ccd6f6] text-[22px] font-calibri font-semibold leading-[1.1] opScreen3:h-[13%] opScreen5:h-[20%] opScreen6:h-[19%] opScreen7:h-[14%] opScreen13:h-[12%] opScreen14:mt-[22px] opScreen21:h-[18%]">
+          <div className="h-[20%] mt-8 bg-[#172a45] antialiased text-[#ccd6f6] text-[22px] font-calibri font-semibold leading-[1.1] opScreen3:h-[13%] opScreen5:h-[20%] opScreen6:h-[19%] opScreen7:h-[14%] opScreen13:h-[12%] opScreen14:mt-[22px] opScreen21:h-[18%] opScreen33:mt-[35px]">
             Full Stack Ecommerce Site
           </div>
           {/* Description */}
-          <div className="h-[40%] mt-[10px] bg-[#172a45] antialiased text-[17px] text-[#a8b2d1] font-calibri leading-[1.3] opScreen5:h-[32%] opScreen6:h-[35%] opScreen7:h-[35%] opScreen13:h-[30%] opScreen16:mt-[30px] opScreen17:h-[44%]">
+          <div className="h-[40%] mt-[10px] bg-[#172a45] antialiased text-[17px] text-[#a8b2d1] font-calibri leading-[1.3] opScreen5:h-[32%] opScreen6:h-[35%] opScreen7:h-[35%] opScreen13:h-[30%] opScreen16:mt-[30px] opScreen17:h-[44%] opScreen33:mt-[25px]">
             This ecommerce site provides a smooth UI/UX with inventory managment
             and payment processing.
           </div>
@@ -175,9 +175,9 @@ const OtherProjects = () => {
         {/* Second Project Box */}
         <div
           ref={refSecondProject}
-          className={`contentContainer ${
+          className={`contentContainer otherProjectBox ${
             secondProjectVisible ? "show" : ""
-          } w-[48%] relative py-8 px-7 rounded bg-[#172a45] mt-4 transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration top-0 opScreen6:w-[32%] opScreen7:w-[48%] opScreen9:w-[31%] opScreen13:w-[100%]`}
+          } w-[48%] relative py-8 px-7 rounded bg-[#172a45] mt-4 transition-all duration-250 ease-in-out top-0 opScreen6:w-[32%] opScreen7:w-[48%] opScreen9:w-[31%] opScreen13:w-[100%]`}
         >
           {/* Header Box */}
           <div className="w-[100%] h-10 bg-[#172a45] flex justify-between items-center">
@@ -222,11 +222,11 @@ const OtherProjects = () => {
             </div>
           </div>
           {/* Title  */}
-          <div className="h-[20%] mt-8 bg-[#172a45] antialiased text-[#ccd6f6] text-[22px] font-calibri font-semibold leading-[1.1] opScreen3:h-[13%] opScreen5:h-[20%] opScreen6:h-[19%] opScreen7:h-[14%] opScreen13:h-[12%] opScreen14:mt-[22px] opScreen21:h-[18%]">
+          <div className="h-[20%] mt-8 bg-[#172a45] antialiased text-[#ccd6f6] text-[22px] font-calibri font-semibold leading-[1.1] opScreen3:h-[13%] opScreen5:h-[20%] opScreen6:h-[19%] opScreen7:h-[14%] opScreen13:h-[12%] opScreen14:mt-[22px] opScreen21:h-[18%] opScreen33:mt-[35px]">
             Comsats Internship Portal
           </div>
           {/* Description */}
-          <div className="h-[40%] mt-[10px] bg-[#172a45] antialiased text-[17px] text-[#a8b2d1] font-calibri leading-[1.3] opScreen5:h-[32%] opScreen6:h-[35%] opScreen7:h-[35%] opScreen13:h-[30%] opScreen16:mt-[30px] opScreen17:h-[44%]">
+          <div className="h-[40%] mt-[10px] bg-[#172a45] antialiased text-[17px] text-[#a8b2d1] font-calibri leading-[1.3] opScreen5:h-[32%] opScreen6:h-[35%] opScreen7:h-[35%] opScreen13:h-[30%] opScreen16:mt-[30px] opScreen17:h-[44%] opScreen33:mt-[25px]">
             A MERN stack scalable platform for internship applications and management.
           </div>
           {/* Footer */}

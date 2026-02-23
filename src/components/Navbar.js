@@ -1,7 +1,5 @@
-import { React, useState, useEffect, useRef, useLayoutEffect } from "react";
-import { Link } from "react-router-dom";
+import { React, useState, useEffect } from "react";
 import "../Css_applied/navbarStyles.css";
-import { useNavigate } from "react-router-dom";
 
 const Navbar = ({
   setAboutBtnClickedActive,
@@ -9,7 +7,6 @@ const Navbar = ({
   setWorkBtnClickedActive,
   setContactBtnClickedActive,
 }) => {
-  const navigate = useNavigate();
   const [isActive, setActive] = useState(false);
   const [isOffScreen, setOffScreen] = useState(false);
   const [scrollHeight, setScrollHeight] = useState(0);
@@ -106,7 +103,7 @@ const Navbar = ({
     } else {
       setSecondConditionAlreadyActive(false);
     }
-  });
+  }, [secondCondition]);
 
   useEffect(() => {
     if (isSecondConditionAlreadyActive) {
@@ -152,13 +149,6 @@ const Navbar = ({
     return () => window.removeEventListener("scroll", handleScroll);
   }, [setShowDiv, setShowSecondDiv]);
 
-  useEffect(() => {
-    document.addEventListener("click", handleClick);
-    return () => {
-      document.removeEventListener("click", handleClick);
-    };
-  }, []);
-
   const handleClick = (event) => {
     const element = document.getElementById("offScreenMenu");
     if (isActive) {
@@ -168,6 +158,13 @@ const Navbar = ({
       }
     }
   };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, [handleClick]);
 
   const handleAboutSmClicked = () => {
     setAboutBtnSm(true);
@@ -201,7 +198,7 @@ const Navbar = ({
       setWorkBtnSm(false);
       setContactBtnSm(false);
     }
-  });
+  }, [isOffScreen]);
 
   useEffect(() => {
     const handleScroll = () => {
