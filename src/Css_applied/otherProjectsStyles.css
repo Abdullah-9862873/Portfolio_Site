@@ -16,12 +16,13 @@
   }
 
   .otherProjectBox {
-    transition: all 0.25s ease-in-out;
+    transform: translateY(0);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease-in-out;
   }
 
   .otherProjectBox:hover {
-    margin-top: -7px;
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px -15px rgba(2, 12, 27, 0.7);
   }
 
 
