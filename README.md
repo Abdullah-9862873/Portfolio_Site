@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Abdullah Sultan - Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website showcasing my work as a Full-Stack Engineer with expertise in Artificial Intelligence, system design, and intelligent automation.
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+Hi, I'm **Abdullah Sultan** - a Full-Stack Engineer with a deep interest in Artificial Intelligence, system design, and intelligent automation. I focus on combining AI models with robust web architectures to build smart agents, data-driven platforms, and scalable infrastructure.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Languages & Version Control
+- JavaScript (ES6+)
+- Python
+- C / C++ (OOP + DSA)
+- Git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### AI & Machine Learning
+- TensorFlow
+- PyTorch
+- OpenAI (GPT-4/GPT-4o)
+- LangChain
+- LlamaIndex
+- Hugging Face
+- OpenCV
+- YOLOv5/YOLOv8
 
-### `npm test`
+### Web Frameworks & Libraries
+- React.js
+- Node.js
+- Express.js
+- FastAPI
+- Redux
+- Tailwind CSS
+- Bootstrap 5
+- HTML5 / CSS3 / SCSS
+- Docker
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Databases
+- MongoDB
+- MySQL
 
-### `npm run build`
+### Cloud & DevOps
+- AWS
+- Azure
+- Cloudflare
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Experience
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Gigalabs Pvt Ltd
+**Associate Software Engineer** | Mar 2024 - Nov 2024
+- Collaborated with senior developers to deliver quality software solutions
+- Developed and tested features for web and backend systems
+- Participated in daily standups, code reviews, and Agile sprints
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### MansolHab
+**Web Dev Trainer** | Oct 2023 - Jan 2024
+- Designed and delivered a structured curriculum covering HTML, CSS, JavaScript, React, Node.js, and databases
+- Conducted interactive sessions, live coding demonstrations, and project-based learning
+- Provided personalized mentorship and debugging support
 
-### `npm run eject`
+## Featured Projects
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### [MansolHab](https://mansolhab.com/)
+A production-ready web application (WordPress) for a UK-based training center in Pakistan.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### AI Based CV Generator
+Vision to make image or PDF uploaded CVs editable for free.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### VoiceBite
+An innovative voice-based application.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### PanaPDF
+A PDF management and processing tool.
 
-## Learn More
+## Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
 
-### Code Splitting
+```bash
+# Clone the repository
+git clone https://github.com/Abdullah-9862873/Portfolio_Site.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Navigate to project directory
+cd Portfolio_Site
 
-### Analyzing the Bundle Size
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Start development server
+npm start
+```
 
-### Making a Progressive Web App
+The app will open at [http://localhost:3000](http://localhost:3000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Build for Production
 
-### Advanced Configuration
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
+- Email: [ag9862873@gmail.com](mailto:ag9862873@gmail.com)
+- Location: Sheikhupura, Pakistan
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with React.js and Tailwind CSS
