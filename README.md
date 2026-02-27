@@ -102,11 +102,5 @@ The app will open at [http://localhost:3000](http://localhost:3000)
 npm run build
 ```
 
-## Contact
-
-- Email: [ag9862873@gmail.com](mailto:ag9862873@gmail.com)
-- Location: Sheikhupura, Pakistan
-
----
 
 Built with React.js and Tailwind CSS
