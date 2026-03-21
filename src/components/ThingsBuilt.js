@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "../Css_applied/thingsBuiltStyles.css";
 import panaImage1 from "../images/panapdf/Screenshot 2026-02-22 010725.png";
 import panaImage2 from "../images/panapdf/Screenshot 2026-02-22 010739.png";
-import panaImage3 from "../images/panapdf/Screenshot 2026-02-22 010754.png";
+import panaImage3 from "../images/panapdf/Screenshot 2026-02-22 010754.png"; 
 import panaImage4 from "../images/panapdf/Screenshot 2026-02-22 010824.png";
 import mansolImage1 from "../images/mansolhab/Screenshot 2026-02-22 012820.png";
 import mansolImage2 from "../images/mansolhab/Screenshot 2026-02-22 012838.png";
