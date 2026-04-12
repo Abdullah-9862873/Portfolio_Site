@@ -432,7 +432,7 @@ const Navbar = ({
                       Contact
                     </button>
                     <a
-                      href="https://drive.google.com/file/d/1Tf3bvphzUZLD-n4SrnzhR68h_oivKuU1/view?usp=drive_link"
+                      href="https://drive.google.com/file/d/1Tf3bvphzUZLD-n4SrnzhR68h_oivKuU1/view?usp=drive_link
                       className="py-[18px] px-[50px] flex  justify-center  items-center  mt-[4rem]  bg-[#172a45] border  border-[#64ffda]  rounded  font-mono  text-[#64ffda]  tracking-wide cursor-pointer antialiased"
                     >
                       Resume
@@ -623,7 +623,7 @@ const Navbar = ({
                   Contact
                 </button>
                 <a
-                  href="https://drive.google.com/file/d/1Tf3bvphzUZLD-n4SrnzhR68h_oivKuU1/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1Tf3bvphzUZLD-n4SrnzhR68h_oivKuU1/view?usp=drive_link
                   className="py-[18px] px-[50px] flex  justify-center  items-center  mt-[4rem]  bg-[#172a45] border  border-[#64ffda]  rounded  font-mono  text-[#64ffda]  tracking-wide cursor-pointer antialiased"
                 >
                   Resume
@@ -784,7 +784,7 @@ const Navbar = ({
                   </span>
                 </span>
                 <a
-                  href="https://drive.google.com/file/d/1Tf3bvphzUZLD-n4SrnzhR68h_oivKuU1/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1Tf3bvphzUZLD-n4SrnzhR68h_oivKuU1/view?usp=drive_link
                   onClick={() => {
                     setResumeBtnClicked(true);
                   }}
