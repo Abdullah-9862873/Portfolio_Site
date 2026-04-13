@@ -766,7 +766,7 @@ const Navbar = ({
                   >
                     Work
                   </span>
-                </span>
+                </span> 
                 <span
                   id="contactLarge"
                   className="text-[13px] p-[10px] no-underline transition-whereIWorkedTransitionProperty duration-whereIWorkedTransitionDuration ease-whereIWorkedTransitionTiming cursor-pointer mr-[10px] font-customMono myScreen5:px-[5px]"
