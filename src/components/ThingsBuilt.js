@@ -22,6 +22,7 @@ import safetyBoundaryImage1 from "../images/SafetyBoundary/1.jpg";
 import safetyBoundaryImage2 from "../images/SafetyBoundary/2.jpg";
 import openclawImage1 from "../images/Openclaw Guardian/1.png";
 import openclawImage2 from "../images/Openclaw Guardian/2.png";
+import openclawImage3 from "../images/Openclaw Guardian/3.png";
 
 const ThingsBuilt = ({ workBtnClickedActive }) => {
   const panaImages = [panaImage1, panaImage2, panaImage3, panaImage4];
@@ -29,14 +30,8 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
   const voicebiteImages = [voicebiteImage1, voicebiteImage2, voicebiteImage3];
   const makingReposSpeakableImages = [makingReposSpeakableImage1, makingReposSpeakableImage2, makingReposSpeakableImage3];
   const safetyBoundaryImages = [safetyBoundaryImage1, safetyBoundaryImage2];
-  const openclawImages = [openclawImage1, openclawImage2];
+  const openclawImages = [openclawImage1, openclawImage2, openclawImage3];
 
-  const [firstThingsMouseOver, setFirstThingMOuseOver] = useState(false);
-  const [fourthThingsMouseOver, setFourthThingMOuseOver] = useState(false);
-  const [voicebiteThingsMouseOver, setVoicebiteThingMOuseOver] = useState(false);
-  const [makingReposSpeakableThingsMouseOver, setMakingReposSpeakableThingMOuseOver] = useState(false);
-  const [safetyBoundaryThingsMouseOver, setSafetyBoundaryThingMOuseOver] = useState(false);
-  const [openclawThingsMouseOver, setOpenclawThingMOuseOver] = useState(false);
   // Hover On Icons
   const [firstThingGithubHover, setFirstThingGithubHover] = useState(false);
   const [fourthThingLinkHover, setFourthThingLinkHover] = useState(false);
@@ -759,11 +754,7 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             </div>
           </div>
           <div
-            className={
-              safetyBoundaryThingsMouseOver
-                ? "project-image-hover2"
-                : "project-image2 mix-blend-exclusion"
-            }
+            className="project-image2"
           >
             <a href="https://github.com/Abdullah-9862873/Professor_Tucker_Research">
               <CrossfadeImage
@@ -784,11 +775,7 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
           } featured__StyledProject ml-[5%] mr-[5%]`}
         >
           <div
-            className={
-              openclawThingsMouseOver
-                ? "project-image-hover"
-                : "project-image mix-blend-screen"
-            }
+            className="project-image"
           >
             <a href="https://github.com/Abdullah-9862873/Github_Dependency_Checker">
               <CrossfadeImage
@@ -939,11 +926,7 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             </div>
           </div>
           <div
-            className={
-              makingReposSpeakableThingsMouseOver
-                ? "project-image-hover2"
-                : "project-image2 mix-blend-exclusion"
-            }
+            className="project-image2"
           >
             <a href="https://making-repos-speakable.vercel.app/">
               <CrossfadeImage
@@ -1008,11 +991,7 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             </div>
           </div>
           <div
-            className={
-              firstThingsMouseOver
-                ? "project-image-hover"
-                : "project-image mix-blend-screen"
-            }
+            className="project-image"
           >
             <a href="https://www.panapdf.com/">
               <CrossfadeImage
@@ -1076,11 +1055,7 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             </div>
           </div>
           <div
-            className={
-              fourthThingsMouseOver
-                ? "project-image-hover2"
-                : "project-image2 mix-blend-exclusion"
-            }
+            className="project-image2"
           >
             <a href="https://mansolhab.com/">
               <CrossfadeImage
@@ -1142,11 +1117,7 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             </div>
           </div>
           <div
-            className={
-              voicebiteThingsMouseOver
-                ? "project-image-hover"
-                : "project-image mix-blend-screen"
-            }
+            className="project-image"
           >
             <a href="https://github.com/Abdullah-9862873/voicebite">
               <CrossfadeImage
