@@ -122,9 +122,9 @@ const OtherProjects = () => {
                 viewBox="0 0 24 24"
                 fill="#172a45"
                 stroke="currentColor"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 class="feather feather-folder"
                 style={{ backgroundColor: "#172a45" }}
               >
@@ -147,9 +147,9 @@ const OtherProjects = () => {
                   viewBox="0 0 24 24"
                   fill="#172a45"
                   stroke={firstBoxGithubSvg ? "#64ffda" : "currentColor"}
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   class="feather feather-github"
                   style={{ backgroundColor: "#172a45" }}
                 >
@@ -189,9 +189,9 @@ const OtherProjects = () => {
                 viewBox="0 0 24 24"
                 fill="#172a45"
                 stroke="currentColor"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 class="feather feather-folder"
                 style={{ backgroundColor: "#172a45" }}
               >
@@ -210,9 +210,9 @@ const OtherProjects = () => {
                   viewBox="0 0 24 24"
                   fill="#172a45"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   class="feather feather-github"
                   style={{ backgroundColor: "#172a45" }}
                 >

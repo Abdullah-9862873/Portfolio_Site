@@ -16,6 +16,7 @@
     transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, auto);
     -webkit-box-align: center;
     align-items: center;
     margin-bottom: 100px;
@@ -37,7 +38,7 @@
     grid-area: 1 / 1 / -5 / 7;
     position: relative;
     z-index: 10;
-    opacity: 0.7;
+    height: 100%;
 }
 .project-image-hover {
     grid-column: 1 / 8;
@@ -47,6 +48,7 @@
     position: relative;
     z-index: 10;
     opacity: 1;
+    height: 100%;
 }
 
 
@@ -58,6 +60,7 @@
     transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, auto);
     -webkit-box-align: center;
     align-items: center;
     margin-bottom: 100px;
@@ -78,7 +81,7 @@
     grid-area: 1 / 6 / -5 / 13;
     position: relative;
     z-index: 10;
-    opacity: 0.7;
+    height: 100%;
 }
 
 .project-image-hover2 {
@@ -89,6 +92,7 @@
     position: relative;
     z-index: 10;
     opacity: 1;
+    height: 100%;
 }
 
 .description2 {
@@ -113,6 +117,7 @@
     transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, auto);
     -webkit-box-align: center;
     align-items: center;
     margin-bottom: 100px;
@@ -134,7 +139,7 @@
     grid-area: 1 / 1 / -5 / 7;
     position: relative;
     z-index: 10;
-    opacity: 0.7;
+    height: 100%;
 }
 
 .project-image3-hover {
@@ -151,9 +156,17 @@
 @media (min-width: 850px) {
     .project-image {
         grid-area: 1 / 1 / -5 / 8;
+        opacity: 0.7;
+        min-height: 300px;
     }
     .project-image3 {
         grid-area: 1 / 1 / -5 / 9;
+        opacity: 0.7;
+        min-height: 300px;
+    }
+    .project-image2 {
+        opacity: 0.7;
+        min-height: 300px;
     }
 }
 
@@ -165,3 +178,39 @@
         grid-area: 1 / 1 / -1 / 7;
     }
 } */
+
+/* Image Crossfade */
+@keyframes crossfade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.crossfade-img {
+    animation: crossfade 0.8s ease-in-out;
+}
+
+/* Typewriter Effect */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.tech-typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: #64ffda;
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+}
+
+.tech-click-label {
+    cursor: pointer;
+    color: #ccd6f6;
+    transition: color 0.25s ease;
+    user-select: none;
+}
+
+.tech-click-label:hover {
+    color: #64ffda;
+}

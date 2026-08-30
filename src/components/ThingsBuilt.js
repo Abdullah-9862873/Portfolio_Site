@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../Css_applied/thingsBuiltStyles.css";
+import TypewriterEffect from "./TypewriterEffect";
+import CrossfadeImage from "./CrossfadeImage";
 import panaImage1 from "../images/panapdf/Screenshot 2026-02-22 010725.png";
 import panaImage2 from "../images/panapdf/Screenshot 2026-02-22 010739.png";
 import panaImage3 from "../images/panapdf/Screenshot 2026-02-22 010754.png"; 
@@ -23,67 +25,13 @@ import openclawImage2 from "../images/Openclaw Guardian/2.png";
 
 const ThingsBuilt = ({ workBtnClickedActive }) => {
   const panaImages = [panaImage1, panaImage2, panaImage3, panaImage4];
-  const [currentPanaImageIndex, setCurrentPanaImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPanaImageIndex((prev) => (prev + 1) % panaImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [panaImages.length]);
-
   const mansolImages = [mansolImage1, mansolImage2, mansolImage3, mansolImage4, mansolImage5, mansolImage6];
-  const [currentMansolImageIndex, setCurrentMansolImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMansolImageIndex((prev) => (prev + 1) % mansolImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [mansolImages.length]);
-
   const voicebiteImages = [voicebiteImage1, voicebiteImage2, voicebiteImage3];
-  const [currentVoicebiteImageIndex, setCurrentVoicebiteImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentVoicebiteImageIndex((prev) => (prev + 1) % voicebiteImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [voicebiteImages.length]);
-
   const makingReposSpeakableImages = [makingReposSpeakableImage1, makingReposSpeakableImage2, makingReposSpeakableImage3];
-  const [currentMakingReposSpeakableImageIndex, setCurrentMakingReposSpeakableImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMakingReposSpeakableImageIndex((prev) => (prev + 1) % makingReposSpeakableImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [makingReposSpeakableImages.length]);
-
   const safetyBoundaryImages = [safetyBoundaryImage1, safetyBoundaryImage2];
-  const [currentSafetyBoundaryImageIndex, setCurrentSafetyBoundaryImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSafetyBoundaryImageIndex((prev) => (prev + 1) % safetyBoundaryImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [safetyBoundaryImages.length]);
-
   const openclawImages = [openclawImage1, openclawImage2];
-  const [currentOpenclawImageIndex, setCurrentOpenclawImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentOpenclawImageIndex((prev) => (prev + 1) % openclawImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [openclawImages.length]);
 
   const [firstThingsMouseOver, setFirstThingMOuseOver] = useState(false);
-  const [thirdThingsMouseOver, setThirdThingMOuseOver] = useState(false);
   const [fourthThingsMouseOver, setFourthThingMOuseOver] = useState(false);
   const [voicebiteThingsMouseOver, setVoicebiteThingMOuseOver] = useState(false);
   const [makingReposSpeakableThingsMouseOver, setMakingReposSpeakableThingMOuseOver] = useState(false);
@@ -91,7 +39,6 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
   const [openclawThingsMouseOver, setOpenclawThingMOuseOver] = useState(false);
   // Hover On Icons
   const [firstThingGithubHover, setFirstThingGithubHover] = useState(false);
-  const [thirdThingGithubHover, setThirdThingGithubHover] = useState(false);
   const [fourthThingLinkHover, setFourthThingLinkHover] = useState(false);
   const [voicebiteThingGithubHover, setVoicebiteThingGithubHover] = useState(false);
   const [makingReposSpeakableThingGithubHover, setMakingReposSpeakableThingGithubHover] = useState(false);
@@ -296,7 +243,6 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
   });
 
   // For small Screen
-  const yourDiv = document.getElementById("firstDiv");
   function isElementInViewportWithOffset(el, offset = 0) {
     let rect = el.getBoundingClientRect();
     let windowHeight =
@@ -423,13 +369,12 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
           id="safetyBoundaryThing"
           className={`contentContainer show relative py-4 mb-8`}
         >
-          <div className="relative h-[200px] w-full overflow-hidden rounded">
-            <img
-              className="absolute inset-0 w-full h-full object-cover opacity-20"
-              src={safetyBoundaryImages[currentSafetyBoundaryImageIndex]}
-              alt="image"
-            />
-          </div>
+          <CrossfadeImage
+            images={safetyBoundaryImages}
+            interval={3000}
+            className="h-[200px] w-full overflow-hidden rounded"
+            alt="SafetyBoundary"
+          />
           <div className="px-4 pt-4">
             <div className="text-[12px] text-[#64ffda] font-customMono">
               Featured Project
@@ -440,9 +385,10 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             <div className="text-[15px] text-[#a8b2d1] font-calibri leading-[1.3] py-3">
               An experimental vision study inspired by Fail2Progress, learning from subtle and obvious safety failures using ResNet18 on COCO dataset
             </div>
-            <div className="text-[12px] text-[#ccd6f6] font-customMono mt-2">
-              PyTorch torchvision YOLOv8 scikit-learn OpenCV FastAPI Streamlit
-            </div>
+            <TypewriterEffect
+              tools={["PyTorch", "YOLOv8", "ResNet18", "scikit-learn", "NumPy", "OpenCV", "Albumentations", "Matplotlib", "Seaborn", "SciPy", "FastAPI", "Streamlit", "ReportLab"]}
+              isRightAligned={false}
+            />
             <div className="flex gap-4 mt-2">
               <a
                 target="_blank"
@@ -473,13 +419,12 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
           id="openclawThing"
           className={`contentContainer show relative py-4 mb-8`}
         >
-          <div className="relative h-[200px] w-full overflow-hidden rounded">
-            <img
-              className="absolute inset-0 w-full h-full object-cover opacity-20"
-              src={openclawImages[currentOpenclawImageIndex]}
-              alt="image"
-            />
-          </div>
+          <CrossfadeImage
+            images={openclawImages}
+            interval={3000}
+            className="h-[200px] w-full overflow-hidden rounded"
+            alt="OpenClaw Guardian"
+          />
           <div className="px-4 pt-4">
             <div className="text-[12px] text-[#64ffda] font-customMono">
               Featured Project
@@ -490,9 +435,10 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             <div className="text-[15px] text-[#a8b2d1] font-calibri leading-[1.3] py-3">
               Autonomous AI agent that monitors GitHub repos for outdated npm dependencies, upgrades them, and creates pull requests
             </div>
-            <div className="text-[12px] text-[#ccd6f6] font-customMono mt-2">
-              Python Flask PyYAML Requests GitHub API Node.js npm
-            </div>
+            <TypewriterEffect
+              tools={["Python", "GitHub API", "Flask", "PyYAML", "Requests", "Node.js", "npm"]}
+              isRightAligned={false}
+            />
             <div className="flex gap-4 mt-2">
               <a
                 target="_blank"
@@ -544,13 +490,12 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
           id="makingReposSpeakableThing"
           className={`contentContainer show relative py-4 mb-8`}
         >
-          <div className="relative h-[200px] w-full overflow-hidden rounded">
-            <img
-              className="absolute inset-0 w-full h-full object-cover opacity-20"
-              src={makingReposSpeakableImages[currentMakingReposSpeakableImageIndex]}
-              alt="image"
-            />
-          </div>
+          <CrossfadeImage
+            images={makingReposSpeakableImages}
+            interval={3000}
+            className="h-[200px] w-full overflow-hidden rounded"
+            alt="Making Repos Speakable"
+          />
           <div className="px-4 pt-4">
             <div className="text-[12px] text-[#64ffda] font-customMono">
               Featured Project
@@ -561,9 +506,10 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             <div className="text-[15px] text-[#a8b2d1] font-calibri leading-[1.3] py-3">
               Give life to your repositories. Ask anything about any codebase.
             </div>
-            <div className="text-[12px] text-[#ccd6f6] font-customMono mt-2">
-              Next.js TypeScript CSS FastAPI Groq Pinecone Sentence Transformers
-            </div>
+            <TypewriterEffect
+              tools={["Groq", "Pinecone", "Sentence Transformers", "FastAPI", "Next.js", "TypeScript", "CSS"]}
+              isRightAligned={false}
+            />
             <div className="flex gap-4 mt-2">
               <a
                 target="_blank"
@@ -615,13 +561,12 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
           id="firstThing"
           className={`contentContainer show relative py-4 mb-8`}
         >
-          <div className="relative h-[200px] w-full overflow-hidden rounded">
-            <img
-              className="absolute inset-0 w-full h-full object-cover opacity-20"
-              src={panaImages[currentPanaImageIndex]}
-              alt="image"
-            />
-          </div>
+          <CrossfadeImage
+            images={panaImages}
+            interval={3000}
+            className="h-[200px] w-full overflow-hidden rounded"
+            alt="PanaPDF"
+          />
           <div className="px-4 pt-4">
             <div className="text-[12px] text-[#64ffda] font-customMono">
               Featured Project
@@ -632,9 +577,10 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             <div className="text-[15px] text-[#a8b2d1] font-calibri leading-[1.3] py-3">
               A production ready application having many pdf alteration tools embedded
             </div>
-            <div className="text-[12px] text-[#ccd6f6] font-customMono mt-2">
-              Next.js Node.js TypeScript React PyPDF
-            </div>
+            <TypewriterEffect
+              tools={["Next.js", "Node.js", "TypeScript", "React", "PyPDF"]}
+              isRightAligned={false}
+            />
             <div className="flex gap-4 mt-2">
               <a
                 target="_blank"
@@ -666,13 +612,12 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
           id="mansolhabThing"
           className={`contentContainer show relative py-4 mb-8 mt-8`}
         >
-          <div className="relative h-[200px] w-full overflow-hidden rounded">
-            <img
-              className="absolute inset-0 w-full h-full object-cover opacity-20"
-              src={mansolImages[currentMansolImageIndex]}
-              alt="image"
-            />
-          </div>
+          <CrossfadeImage
+            images={mansolImages}
+            interval={3000}
+            className="h-[200px] w-full overflow-hidden rounded"
+            alt="MansolHab"
+          />
           <div className="px-4 pt-4">
             <div className="text-[12px] text-[#64ffda] font-customMono">
               Featured Project
@@ -683,9 +628,10 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             <div className="text-[15px] text-[#a8b2d1] font-calibri leading-[1.3] py-3">
               A production used web application (Wordpress) for UK based training center in Pakistan
             </div>
-            <div className="text-[12px] text-[#ccd6f6] font-customMono mt-2">
-              WordPress PHP
-            </div>
+            <TypewriterEffect
+              tools={["WordPress", "PHP"]}
+              isRightAligned={false}
+            />
             <div className="flex gap-4 mt-2">
               <a
                 target="_blank"
@@ -717,13 +663,12 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
           id="voicebiteThing"
           className={`contentContainer show relative py-4 mb-8 mt-8`}
         >
-          <div className="relative h-[200px] w-full overflow-hidden rounded">
-            <img
-              className="absolute inset-0 w-full h-full object-cover opacity-20"
-              src={voicebiteImages[currentVoicebiteImageIndex]}
-              alt=""
-            />
-          </div>
+          <CrossfadeImage
+            images={voicebiteImages}
+            interval={3000}
+            className="h-[200px] w-full overflow-hidden rounded"
+            alt="VoiceBite"
+          />
           <div className="px-4 pt-4">
             <div className="text-[12px] text-[#64ffda] font-customMono">
               Featured Project
@@ -734,9 +679,10 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             <div className="text-[15px] text-[#a8b2d1] font-calibri leading-[1.3] py-3">
               AI based application to order and navigate food items using voice
             </div>
-            <div className="text-[12px] text-[#ccd6f6] font-customMono mt-2">
-              Next.js React TypeScript FastAPI Python OpenAI GPT APIs Speech Recognition
-            </div>
+            <TypewriterEffect
+              tools={["OpenAI GPT APIs", "Speech Recognition", "FastAPI", "Python", "Next.js", "React", "TypeScript"]}
+              isRightAligned={false}
+            />
             <div className="flex gap-4 mt-2">
               <a
                 target="_blank"
@@ -767,29 +713,32 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
         {/* SafetyBoundary Project - Desktop */}
         <div
           ref={refSafetyBoundaryThing}
-          class={`contentContainer ${
+          className={`contentContainer ${
             safetyBoundaryThingVisible ? "show" : ""
           } featured__StyledProject2 ml-[5%] mr-[5%]`}
         >
-          <div class="project-content2 text-left text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased">
+          <div className="project-content2 text-left text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased">
             <p>Featured Project</p>
-            <h3 class="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-left relative z-0 md:opacity-[1]">
+            <h3 className="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-left relative z-0 md:opacity-[1]">
               SafetyBoundary Detection
             </h3>
-            <div class="description2 text-[18px] bg-[#172a45] shadow-none text-[#a8b2d1] font-calibri leading-[1.3] py-[10px] text-left relative z-20 rounded mb-[3%] mt-[7%] tbScreen40:px-[20px] tbScreen40:py-[20px]">
+            <div className="description2 text-[18px] bg-[#172a45] shadow-none text-[#a8b2d1] font-calibri leading-[1.3] py-[10px] text-left relative z-20 rounded mb-[3%] mt-[7%] tbScreen40:px-[20px] tbScreen40:py-[20px]">
               <p className="text-[#a8b2d1] bg-[#172a45]">
                 An experimental vision study inspired by Fail2Progress, learning from subtle and obvious safety failures using ResNet18 on COCO dataset. Overall accuracy improved from 46.67% to 77.78% (+31.11%) through class-weighted fine-tuning.
               </p>
             </div>
-            <ul class="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-left max-w-[300px] whitespace-nowrap overflow-hidden text-ellipsis">
-              <li className="whitespace-nowrap overflow-hidden text-ellipsis">PyTorch torchvision YOLOv8 scikit-learn OpenCV FastAPI Streamlit</li>
-            </ul>
+            <div className="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-left max-w-[300px] whitespace-normal overflow-hidden h-[80px]">
+              <TypewriterEffect
+                tools={["PyTorch", "YOLOv8", "ResNet18", "scikit-learn", "NumPy", "OpenCV", "Albumentations", "Matplotlib", "Seaborn", "SciPy", "FastAPI", "Streamlit", "ReportLab"]}
+                isRightAligned={false}
+              />
+            </div>
             <div className="tbScreen27:pr-[41px]">
               <a
                 onMouseOver={() => setSafetyBoundaryThingGithubHover(true)}
                 onMouseOut={() => setSafetyBoundaryThingGithubHover(false)}
                 target="_blank"
-                class="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
+                className="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
                 href="https://github.com/Abdullah-9862873/Professor_Tucker_Research"
                 aria-label="GitHub Link"
               >
@@ -817,15 +766,12 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             }
           >
             <a href="https://github.com/Abdullah-9862873/Professor_Tucker_Research">
-              <div>
-                <img
-                  onMouseOver={() => setSafetyBoundaryThingMOuseOver(true)}
-                  onMouseOut={() => setSafetyBoundaryThingMOuseOver(false)}
-                  class="object-top object-contain transition-opacity duration-500"
-                  src={safetyBoundaryImages[currentSafetyBoundaryImageIndex]}
-                  alt="image"
-                />
-              </div>
+              <CrossfadeImage
+                images={safetyBoundaryImages}
+                interval={3000}
+                className="w-full h-full"
+                alt="SafetyBoundary"
+              />
             </a>
           </div>
         </div>
@@ -833,7 +779,7 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
         {/* OpenClaw Guardian Project - Desktop */}
         <div
           ref={refOpenclawThing}
-          class={`contentContainer ${
+          className={`contentContainer ${
             openclawThingVisible ? "show" : ""
           } featured__StyledProject ml-[5%] mr-[5%]`}
         >
@@ -845,36 +791,36 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             }
           >
             <a href="https://github.com/Abdullah-9862873/Github_Dependency_Checker">
-              <div>
-                <img
-                  onMouseOver={() => setOpenclawThingMOuseOver(true)}
-                  onMouseOut={() => setOpenclawThingMOuseOver(false)}
-                  class="object-top object-contain transition-opacity duration-500"
-                  src={openclawImages[currentOpenclawImageIndex]}
-                  alt="image"
-                />
-              </div>
+              <CrossfadeImage
+                images={openclawImages}
+                interval={3000}
+                className="w-full h-full"
+                alt="OpenClaw Guardian"
+              />
             </a>
           </div>
-          <div class="project-content text-right text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased ">
+          <div className="project-content text-right text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased ">
             <p className="tbScreen27:pr-[41px]">Featured Project</p>
-            <h3 class="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-right relative z-0 md:opacity-[1] mb-[7%] tbScreen27:pr-[41px] tbScreen26:mb-[0] tbScreen29:mb-[7%] tbScreen27:mb-[1%]">
+            <h3 className="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-right relative z-0 md:opacity-[1] mb-[7%] tbScreen27:pr-[41px] tbScreen26:mb-[0] tbScreen29:mb-[7%] tbScreen27:mb-[1%]">
               OpenClaw Guardian
             </h3>
-            <div class="text-[18px] bg-[#172a45] text-[#a8b2d1] font-calibri leading-[1.3] text-right relative z-20 shadow-OtherProjectsBoxShadow rounded py-[20px] pl-[3%] pr-[8%] mb-[3%] tbScreen26:pl-[0] tbScreen26:pr-[0] tbScreen26:py-[25px] tbScreen26:mb-[0] tbScreen27:mb-[3%] tbScreen27:px-[10px] tbScreen27:py-[40px] tbScreen29:py-[20px] tbScreen29:inline-block tbScreen29:items-end tbScreen29:w-[80%]">
+            <div className="text-[18px] bg-[#172a45] text-[#a8b2d1] font-calibri leading-[1.3] text-right relative z-20 shadow-OtherProjectsBoxShadow rounded py-[20px] pl-[3%] pr-[8%] mb-[3%] tbScreen26:pl-[0] tbScreen26:pr-[0] tbScreen26:py-[25px] tbScreen26:mb-[0] tbScreen27:mb-[3%] tbScreen27:px-[10px] tbScreen27:py-[40px] tbScreen29:py-[20px] tbScreen29:inline-block tbScreen29:items-end tbScreen29:w-[80%]">
               <p className="bg-[#172a45]">
                 Autonomous AI agent that monitors GitHub repos for outdated npm dependencies, upgrades them, and creates pull requests
               </p>
             </div>
-            <ul class="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-right tbScreen27:pr-[41px] max-w-[300px] ml-auto whitespace-nowrap overflow-hidden text-ellipsis">
-              <li className="whitespace-nowrap overflow-hidden text-ellipsis">Python Flask PyYAML Requests GitHub API Node.js npm</li>
-            </ul>
+            <div className="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-right tbScreen27:pr-[41px] max-w-[300px] ml-auto whitespace-normal overflow-hidden h-[80px]">
+              <TypewriterEffect
+                tools={["Python", "GitHub API", "Flask", "PyYAML", "Requests", "Node.js", "npm"]}
+                isRightAligned={true}
+              />
+            </div>
             <div className="tbScreen27:pr-[41px]">
               <a
                 onMouseOver={() => setOpenclawThingGithubHover(true)}
                 onMouseOut={() => setOpenclawThingGithubHover(false)}
                 target="_blank"
-                class="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
+                className="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
                 href="https://github.com/Abdullah-9862873/Github_Dependency_Checker"
                 aria-label="GitHub Link"
               >
@@ -896,7 +842,7 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
                 onMouseOver={() => setOpenclawThingLinkHover(true)}
                 onMouseOut={() => setOpenclawThingLinkHover(false)}
                 target="_blank"
-                class="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] ml-[10px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
+                className="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] ml-[10px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
                 href="https://github-dependency-checker.app/"
                 aria-label="External Link"
               >
@@ -923,29 +869,32 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
         {/* Making Repos Speakable Project - Desktop */}
         <div
           ref={refMakingReposSpeakableThing}
-          class={`contentContainer ${
+          className={`contentContainer ${
             makingReposSpeakableThingVisible ? "show" : ""
           } featured__StyledProject2 ml-[5%] mr-[5%]`}
         >
-          <div class="project-content2 text-left text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased">
+          <div className="project-content2 text-left text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased">
             <p>Featured Project</p>
-            <h3 class="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-left relative z-0 md:opacity-[1]">
+            <h3 className="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-left relative z-0 md:opacity-[1]">
               Making Repos Speakable
             </h3>
-            <div class="description2 text-[18px] bg-[#172a45] shadow-none text-[#a8b2d1] font-calibri leading-[1.3] py-[10px] text-left relative z-20 rounded mb-[3%] mt-[7%] tbScreen40:px-[20px] tbScreen40:py-[20px]">
+            <div className="description2 text-[18px] bg-[#172a45] shadow-none text-[#a8b2d1] font-calibri leading-[1.3] py-[10px] text-left relative z-20 rounded mb-[3%] mt-[7%] tbScreen40:px-[20px] tbScreen40:py-[20px]">
               <p className="text-[#a8b2d1] bg-[#172a45]">
                 Give life to your repositories. Ask anything about any codebase.
               </p>
             </div>
-            <ul class="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-left max-w-[300px] whitespace-nowrap overflow-hidden text-ellipsis">
-              <li className="whitespace-nowrap overflow-hidden text-ellipsis">Next.js TypeScript CSS FastAPI Groq Pinecone Sentence Transformers</li>
-            </ul>
+            <div className="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-left max-w-[300px] whitespace-normal overflow-hidden h-[80px]">
+              <TypewriterEffect
+                tools={["Groq", "Pinecone", "Sentence Transformers", "FastAPI", "Next.js", "TypeScript", "CSS"]}
+                isRightAligned={false}
+              />
+            </div>
             <div className="tbScreen27:pr-[41px]">
               <a
                 onMouseOver={() => setMakingReposSpeakableThingGithubHover(true)}
                 onMouseOut={() => setMakingReposSpeakableThingGithubHover(false)}
                 target="_blank"
-                class="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
+                className="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
                 href="https://github.com/Abdullah-9862873/Making-Repos-Speakable"
                 aria-label="GitHub Link"
               >
@@ -967,7 +916,7 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
                 onMouseOver={() => setMakingReposSpeakableThingLinkHover(true)}
                 onMouseOut={() => setMakingReposSpeakableThingLinkHover(false)}
                 target="_blank"
-                class="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] ml-[10px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
+                className="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] ml-[10px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
                 href="https://making-repos-speakable.vercel.app/"
                 aria-label="External Link"
               >
@@ -997,15 +946,12 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             }
           >
             <a href="https://making-repos-speakable.vercel.app/">
-              <div>
-                <img
-                  onMouseOver={() => setMakingReposSpeakableThingMOuseOver(true)}
-                  onMouseOut={() => setMakingReposSpeakableThingMOuseOver(false)}
-                  class="object-top object-contain transition-opacity duration-500"
-                  src={makingReposSpeakableImages[currentMakingReposSpeakableImageIndex]}
-                  alt="image"
-                />
-              </div>
+              <CrossfadeImage
+                images={makingReposSpeakableImages}
+                interval={3000}
+                className="w-full h-full"
+                alt="Making Repos Speakable"
+              />
             </a>
           </div>
         </div>
@@ -1014,29 +960,32 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
 
         <div
           ref={refFirstThing}
-          class={`contentContainer ${
+          className={`contentContainer ${
             firstThingVisible ? "show" : ""
           } featured__StyledProject ml-[5%] mr-[5%]`}
         >
-          <div class="project-content text-right text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased ">
+          <div className="project-content text-right text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased ">
             <p className="tbScreen27:pr-[41px]">Featured Project</p>
-            <h3 class="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-right relative z-0 md:opacity-[1] mb-[7%] tbScreen27:pr-[41px] tbScreen26:mb-[0] tbScreen29:mb-[7%] tbScreen27:mb-[1%]">
+            <h3 className="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-right relative z-0 md:opacity-[1] mb-[7%] tbScreen27:pr-[41px] tbScreen26:mb-[0] tbScreen29:mb-[7%] tbScreen27:mb-[1%]">
               PanaPDF
             </h3>
-            <div class="text-[18px] bg-[#172a45] text-[#a8b2d1] font-calibri leading-[1.3] text-right relative z-20 shadow-OtherProjectsBoxShadow rounded py-[20px] pl-[3%] pr-[8%] mb-[3%] tbScreen26:pl-[0] tbScreen26:pr-[0] tbScreen26:py-[25px] tbScreen26:mb-[0] tbScreen27:mb-[3%] tbScreen27:px-[10px] tbScreen27:py-[40px] tbScreen29:py-[20px] tbScreen29:inline-block tbScreen29:items-end tbScreen29:w-[80%]">
+            <div className="text-[18px] bg-[#172a45] text-[#a8b2d1] font-calibri leading-[1.3] text-right relative z-20 shadow-OtherProjectsBoxShadow rounded py-[20px] pl-[3%] pr-[8%] mb-[3%] tbScreen26:pl-[0] tbScreen26:pr-[0] tbScreen26:py-[25px] tbScreen26:mb-[0] tbScreen27:mb-[3%] tbScreen27:px-[10px] tbScreen27:py-[40px] tbScreen29:py-[20px] tbScreen29:inline-block tbScreen29:items-end tbScreen29:w-[80%]">
               <p className="bg-[#172a45]">
                 A production ready application having many pdf alteration tools embedded
               </p>
             </div>
-            <ul class="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-right tbScreen27:pr-[41px] max-w-[300px] ml-auto whitespace-nowrap overflow-hidden text-ellipsis">
-              <li className="whitespace-nowrap overflow-hidden text-ellipsis">Next.js Node.js TypeScript React PyPDF</li>
-            </ul>
+            <div className="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-right tbScreen27:pr-[41px] max-w-[300px] ml-auto whitespace-normal overflow-hidden h-[80px]">
+              <TypewriterEffect
+                tools={["Next.js", "Node.js", "TypeScript", "React", "PyPDF"]}
+                isRightAligned={true}
+              />
+            </div>
             <div className="tbScreen27:pr-[41px]">
               <a
                 onMouseOver={() => setFirstThingGithubHover(true)}
                 onMouseOut={() => setFirstThingGithubHover(false)}
                 target="_blank"
-                class="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
+                className="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
                 href="https://www.panapdf.com/"
                 aria-label="External Link"
               >
@@ -1066,15 +1015,12 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             }
           >
             <a href="https://www.panapdf.com/">
-              <div>
-                <img
-                  onMouseOver={() => setFirstThingMOuseOver(true)}
-                  onMouseOut={() => setFirstThingMOuseOver(false)}
-                  class="object-top object-contain transition-opacity duration-500"
-                  src={panaImages[currentPanaImageIndex]}
-                  alt="image"
-                />
-              </div>
+              <CrossfadeImage
+                images={panaImages}
+                interval={3000}
+                className="w-full h-full"
+                alt="PanaPDF"
+              />
             </a>
           </div>
         </div>
@@ -1082,29 +1028,32 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
         {/* MansolHab Project - Desktop */}
         <div
           ref={refFourthThing}
-          class={`contentContainer ${
+          className={`contentContainer ${
             fourthThingVisible ? "show" : ""
           } featured__StyledProject2 ml-[5%] mr-[5%]`}
         >
-          <div class="project-content2 text-left text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased">
+          <div className="project-content2 text-left text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased">
             <p>Featured Project</p>
-            <h3 class="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-left relative z-0 md:opacity-[1]">
+            <h3 className="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-left relative z-0 md:opacity-[1]">
               MansolHab
             </h3>
-            <div class="description2 text-[18px] bg-[#172a45] shadow-none text-[#a8b2d1] font-calibri leading-[1.3] py-[10px] text-left relative z-20 rounded mb-[3%] mt-[7%] tbScreen40:px-[20px] tbScreen40:py-[20px]">
+            <div className="description2 text-[18px] bg-[#172a45] shadow-none text-[#a8b2d1] font-calibri leading-[1.3] py-[10px] text-left relative z-20 rounded mb-[3%] mt-[7%] tbScreen40:px-[20px] tbScreen40:py-[20px]">
               <p className="text-[#a8b2d1] bg-[#172a45]">
                 A production used web application (Wordpress) for UK based training center in Pakistan
               </p>
             </div>
-            <ul class="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-left max-w-[300px] whitespace-nowrap overflow-hidden text-ellipsis">
-              <li className="whitespace-nowrap overflow-hidden text-ellipsis">WordPress PHP</li>
-            </ul>
+            <div className="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-left max-w-[300px] whitespace-normal overflow-hidden h-[80px]">
+              <TypewriterEffect
+                tools={["WordPress", "PHP"]}
+                isRightAligned={false}
+              />
+            </div>
             <div className="tbScreen27:pr-[41px]">
               <a
                 onMouseOver={() => setFourthThingLinkHover(true)}
                 onMouseOut={() => setFourthThingLinkHover(false)}
                 target="_blank"
-                class="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
+                className="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
                 href="https://mansolhab.com/"
                 aria-label="External Link"
               >
@@ -1134,15 +1083,12 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             }
           >
             <a href="https://mansolhab.com/">
-              <div>
-                <img
-                  onMouseOver={() => setFourthThingMOuseOver(true)}
-                  onMouseOut={() => setFourthThingMOuseOver(false)}
-                  class="object-top object-contain transition-opacity duration-500"
-                  src={mansolImages[currentMansolImageIndex]}
-                  alt="image"
-                />
-              </div>
+              <CrossfadeImage
+                images={mansolImages}
+                interval={3000}
+                className="w-full h-full"
+                alt="MansolHab"
+              />
             </a>
           </div>
         </div>
@@ -1150,29 +1096,32 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
         {/* Voicebite Project - Desktop */}
         <div
           ref={refVoicebiteThing}
-          class={`contentContainer ${
+          className={`contentContainer ${
             voicebiteThingVisible ? "show" : ""
           } featured__StyledProject ml-[5%] mr-[5%]`}
         >
-          <div class="project-content text-right text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased ">
+          <div className="project-content text-right text-[13px] text-[#64ffda] font-customMono bg-transparent antialiased ">
             <p className="tbScreen27:pr-[41px]">Featured Project</p>
-            <h3 class="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-right relative z-0 md:opacity-[1] mb-[7%] tbScreen27:pr-[41px] tbScreen26:mb-[0] tbScreen29:mb-[7%] tbScreen27:mb-[1%]">
+            <h3 className="bg-transparent text-[24px] text-[#e6f1ff] font-calibri font-semibold text-right relative z-0 md:opacity-[1] mb-[7%] tbScreen27:pr-[41px] tbScreen26:mb-[0] tbScreen29:mb-[7%] tbScreen27:mb-[1%]">
               VoiceBite
             </h3>
-            <div class="text-[18px] bg-[#172a45] text-[#a8b2d1] font-calibri leading-[1.3] text-right relative z-20 shadow-OtherProjectsBoxShadow rounded py-[20px] pl-[3%] pr-[8%] mb-[3%] tbScreen26:pl-[0] tbScreen26:pr-[0] tbScreen26:py-[25px] tbScreen26:mb-[0] tbScreen27:mb-[3%] tbScreen27:px-[10px] tbScreen27:py-[40px] tbScreen29:py-[20px] tbScreen29:inline-block tbScreen29:items-end tbScreen29:w-[80%]">
+            <div className="text-[18px] bg-[#172a45] text-[#a8b2d1] font-calibri leading-[1.3] text-right relative z-20 shadow-OtherProjectsBoxShadow rounded py-[20px] pl-[3%] pr-[8%] mb-[3%] tbScreen26:pl-[0] tbScreen26:pr-[0] tbScreen26:py-[25px] tbScreen26:mb-[0] tbScreen27:mb-[3%] tbScreen27:px-[10px] tbScreen27:py-[40px] tbScreen29:py-[20px] tbScreen29:inline-block tbScreen29:items-end tbScreen29:w-[80%]">
               <p className="bg-[#172a45]">
                 AI based application to order and navigate food items using voice
               </p>
             </div>
-            <ul class="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-right tbScreen27:pr-[41px] max-w-[300px] ml-auto whitespace-nowrap overflow-hidden text-ellipsis">
-              <li className="whitespace-nowrap overflow-hidden text-ellipsis">Next.js React TypeScript FastAPI Python OpenAI GPT APIs Speech Recognition</li>
-            </ul>
+            <div className="bg-transparent text-[13px] text-[#a8b2d1] font-customMono text-right tbScreen27:pr-[41px] max-w-[300px] ml-auto whitespace-normal overflow-hidden h-[80px]">
+              <TypewriterEffect
+                tools={["OpenAI GPT APIs", "Speech Recognition", "FastAPI", "Python", "Next.js", "React", "TypeScript"]}
+                isRightAligned={true}
+              />
+            </div>
             <div className="tbScreen27:pr-[41px]">
               <a
                 onMouseOver={() => setVoicebiteThingGithubHover(true)}
                 onMouseOut={() => setVoicebiteThingGithubHover(false)}
                 target="_blank"
-                class="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
+                className="inline-block text-[#ccd6f6] w-[20px] h-[20px] cursor-pointer mt-[14px] antialiased transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration"
                 href="https://github.com/Abdullah-9862873/voicebite"
                 aria-label="GitHub Link"
               >
@@ -1200,15 +1149,12 @@ const ThingsBuilt = ({ workBtnClickedActive }) => {
             }
           >
             <a href="https://github.com/Abdullah-9862873/voicebite">
-              <div>
-                <img
-                  onMouseOver={() => setVoicebiteThingMOuseOver(true)}
-                  onMouseOut={() => setVoicebiteThingMOuseOver(false)}
-                  class="object-top object-contain transition-opacity duration-500"
-                  src={voicebiteImages[currentVoicebiteImageIndex]}
-                  alt=""
-                />
-              </div>
+              <CrossfadeImage
+                images={voicebiteImages}
+                interval={3000}
+                className="w-full h-full"
+                alt="VoiceBite"
+              />
             </a>
           </div>
         </div>
