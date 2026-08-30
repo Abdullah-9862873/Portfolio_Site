@@ -223,7 +223,7 @@ const OtherProjects = () => {
           </div>
           {/* Title  */}
           <div className="h-[20%] mt-8 bg-[#172a45] antialiased text-[#ccd6f6] text-[22px] font-calibri font-semibold leading-[1.1] opScreen3:h-[13%] opScreen5:h-[20%] opScreen6:h-[19%] opScreen7:h-[14%] opScreen13:h-[12%] opScreen14:mt-[22px] opScreen21:h-[18%] opScreen33:mt-[35px]">
-            Comsats Internship Portal
+            Comsats University Internship Portal
           </div>
           {/* Description */}
           <div className="h-[40%] mt-[10px] bg-[#172a45] antialiased text-[17px] text-[#a8b2d1] font-calibri leading-[1.3] opScreen5:h-[32%] opScreen6:h-[35%] opScreen7:h-[35%] opScreen13:h-[30%] opScreen16:mt-[30px] opScreen17:h-[44%] opScreen33:mt-[25px]">

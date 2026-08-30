@@ -25,6 +25,12 @@ const Work = ({ experienceBtnClickedActive }) => {
   const [thirdWorkHover, setThirdWorkHover] = useState(false);
   const [fourthWorkHover, setFourthWorkHover] = useState(false);
   const [fifthWorkHover, setFifthWorkHover] = useState(false);
+  const [sixthWorkClicked, setSixthWorkClicked] = useState(false);
+  const [sixthBarClicked, setSixthBarClicked] = useState(false);
+  const [sixthWorkHover, setSixthWorkHover] = useState(false);
+  const [seventhWorkClicked, setSeventhWorkClicked] = useState(false);
+  const [seventhBarClicked, setSeventhBarClicked] = useState(false);
+  const [seventhWorkHover, setSeventhWorkHover] = useState(false);
   // Displaying content after show time
   const workRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -95,6 +101,10 @@ const Work = ({ experienceBtnClickedActive }) => {
       ? "307.842px"
       : fifthBarClicked
       ? "394px"
+      : sixthBarClicked
+      ? "480px"
+      : seventhBarClicked
+      ? "570px"
       : "0px",
     width: firstBarClicked
       ? `calc(134.7px + ${scrollLeft}px)`
@@ -106,6 +116,10 @@ const Work = ({ experienceBtnClickedActive }) => {
       ? `118px`
       : fifthBarClicked
       ? `149px`
+      : sixthBarClicked
+      ? `120px`
+      : seventhBarClicked
+      ? `100px`
       : `calc(134.7px + ${scrollLeft}px)`,
     height: "2px",
     backgroundColor: "#64ffda",
@@ -119,6 +133,10 @@ const Work = ({ experienceBtnClickedActive }) => {
       ? null
       : fifthBarClicked
       ? null
+      : sixthBarClicked
+      ? null
+      : seventhBarClicked
+      ? null
       : `translateX(-${scrollLeft}px)`,
     transition: "all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
   };
@@ -131,6 +149,8 @@ const Work = ({ experienceBtnClickedActive }) => {
     setThirdWorkClicked(false);
     setFourthWorkClicked(false);
     setFifthWorkClicked(false);
+    setSixthWorkClicked(false);
+    setSeventhWorkClicked(false);
     setMobileActiveTab(0);
     handleFirstBarClicked();
   };
@@ -142,6 +162,8 @@ const Work = ({ experienceBtnClickedActive }) => {
     setThirdWorkClicked(false);
     setFourthWorkClicked(false);
     setFifthWorkClicked(false);
+    setSixthWorkClicked(false);
+    setSeventhWorkClicked(false);
     setMobileActiveTab(1);
     handleSecondBarClicked();
   };
@@ -153,6 +175,8 @@ const Work = ({ experienceBtnClickedActive }) => {
     setSecondWorkClicked(false);
     setFourthWorkClicked(false);
     setFifthWorkClicked(false);
+    setSixthWorkClicked(false);
+    setSeventhWorkClicked(false);
     setMobileActiveTab(2);
     handleThirdBarClicked();
   };
@@ -164,6 +188,8 @@ const Work = ({ experienceBtnClickedActive }) => {
     setSecondWorkClicked(false);
     setThirdWorkClicked(false);
     setFifthWorkClicked(false);
+    setSixthWorkClicked(false);
+    setSeventhWorkClicked(false);
     setMobileActiveTab(3);
     handleFourthBarClicked();
   };
@@ -174,6 +200,8 @@ const Work = ({ experienceBtnClickedActive }) => {
     setSecondWorkClicked(false);
     setThirdWorkClicked(false);
     setFourthWorkClicked(false);
+    setSixthWorkClicked(false);
+    setSeventhWorkClicked(false);
     setMobileActiveTab(4);
     handleFifthBarClicked();
   };
@@ -208,6 +236,52 @@ const Work = ({ experienceBtnClickedActive }) => {
     setThirdBarClicked(false);
     setFourthBarClicked(false);
     setFifthBarClicked(true);
+  };
+
+  const handleSixthWorkClicked = () => {
+    setSixthWorkClicked(true);
+    setNoneWorkClicked(false);
+    setFirstWorkClicked(false);
+    setSecondWorkClicked(false);
+    setThirdWorkClicked(false);
+    setFourthWorkClicked(false);
+    setFifthWorkClicked(false);
+    setSeventhWorkClicked(false);
+    setMobileActiveTab(5);
+    handleSixthBarClicked();
+  };
+
+  const handleSixthBarClicked = () => {
+    setFirstBarClicked(false);
+    setSecondBarClicked(false);
+    setThirdBarClicked(false);
+    setFourthBarClicked(false);
+    setFifthBarClicked(false);
+    setSixthBarClicked(true);
+    setSeventhBarClicked(false);
+  };
+
+  const handleSeventhWorkClicked = () => {
+    setSeventhWorkClicked(true);
+    setNoneWorkClicked(false);
+    setFirstWorkClicked(false);
+    setSecondWorkClicked(false);
+    setThirdWorkClicked(false);
+    setFourthWorkClicked(false);
+    setFifthWorkClicked(false);
+    setSixthWorkClicked(false);
+    setMobileActiveTab(6);
+    handleSeventhBarClicked();
+  };
+
+  const handleSeventhBarClicked = () => {
+    setFirstBarClicked(false);
+    setSecondBarClicked(false);
+    setThirdBarClicked(false);
+    setFourthBarClicked(false);
+    setFifthBarClicked(false);
+    setSixthBarClicked(false);
+    setSeventhBarClicked(true);
   };
 
   useEffect(() => {
@@ -256,7 +330,7 @@ const Work = ({ experienceBtnClickedActive }) => {
           } pt-[5.538rem] relative`}
         >
           <div className="inline-block absolute top-[6.7rem] text-[#64ffda] font-customMono text-headerDescriptionFontSize font-normal antialiased workScreen2:top-[6.5rem] workScreen3:top-[6.3rem]">
-            02.
+            04.
           </div>{" "}
           <div className="aboutMe inline-block mt-[2px] mb-10 ml-12 text-[#ccd6f6] text-[32px] font-calibri font-semibold antialiased relative z-[1] workScreen5:w-[12.7rem]">
             Where I've Worked
@@ -273,7 +347,7 @@ const Work = ({ experienceBtnClickedActive }) => {
             <div className="flex">
             {/* Left Side */}
             <div className="w-[20%] myScreen1:w-[8rem] workScreen10:w-[25.5%]">
-              <div className="h-[12.8rem] relative border-l-[1px] border-l-[#8892b0] rounded transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration delay-whereIWorkedTransitionDelay">
+              <div className="h-[18rem] relative border-l-[1px] border-l-[#8892b0] rounded transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration delay-whereIWorkedTransitionDelay">
                 <div
                   className={
                     firstBarClicked
@@ -286,10 +360,14 @@ const Work = ({ experienceBtnClickedActive }) => {
                       ? "h-[2.625rem] w-[1.6px] absolute border border-[#64ffda] rounded top-[7.6rem] transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration delay-whereIWorkedTransitionDelay"
                       : fifthBarClicked
                       ? "h-[2.625rem] w-[1.6px] absolute border border-[#64ffda] rounded top-[10.3rem] transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration delay-whereIWorkedTransitionDelay"
+                      : sixthBarClicked
+                      ? "h-[2.625rem] w-[1.6px] absolute border border-[#64ffda] rounded top-[13rem] transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration delay-whereIWorkedTransitionDelay"
+                      : seventhBarClicked
+                      ? "h-[2.625rem] w-[1.6px] absolute border border-[#64ffda] rounded top-[15.7rem] transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration delay-whereIWorkedTransitionDelay"
                       : "h-[2.625rem] w-[1.6px] absolute border border-[#64ffda] rounded transition-whereIWorkedTransitionProperty ease-whereIWorkedTransitionTiming duration-whereIWorkedTransitionDuration delay-whereIWorkedTransitionDelay"
                   }
                 ></div>
-                {/* iCodeGuru */}
+                {/* FlyRank AI */}
                 <div
                   onMouseOver={() => setFirstWorkHover(true)}
                   onMouseOut={() => setFirstWorkHover(false)}
@@ -302,9 +380,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                       : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px]"
                   }
                 >
-                  iCodeGuru 
+                  FlyRank AI
                 </div>
-                {/* Sinohydro */}
+                {/* iCodeGuru */}
                 <div
                   onMouseOver={() => setSecondWorkHover(true)}
                   onMouseOut={() => setSecondWorkHover(false)}
@@ -317,9 +395,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                       : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px]"
                   }
                 >
-                  Sinohydro 
+                  iCodeGuru
                 </div>
-                {/* Gigalabs */}
+                {/* Panabotics */}
                 <div
                   onMouseOver={() => setThirdWorkHover(true)}
                   onMouseOut={() => setThirdWorkHover(false)}
@@ -332,9 +410,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                       : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px]"
                   }
                 >
-                  Gigalabs
+                  Panabotics
                 </div>
-                {/* MansolHab */}
+                {/* Sinohydro */}
                 <div
                   onMouseOver={() => setFourthWorkHover(true)}
                   onMouseOut={() => setFourthWorkHover(false)}
@@ -347,9 +425,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                       : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px]"
                   }
                 >
-                  MansolHab
+                  Sinohydro
                 </div>
-                {/* SevenOvn */}
+                {/* Gigalabs */}
                 <div
                   onMouseOver={() => setFifthWorkHover(true)}
                   onMouseOut={() => setFifthWorkHover(false)}
@@ -358,6 +436,36 @@ const Work = ({ experienceBtnClickedActive }) => {
                     fifthWorkHover
                       ? "h-[2.532rem] text-[#64ffda] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px] bg-[#172a45]"
                       : fifthWorkClicked
+                      ? "h-[2.532rem] text-[#64ffda] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px] bg-[#172a45]"
+                      : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px]"
+                  }
+                >
+                  Gigalabs
+                </div>
+                {/* MansolHab */}
+                <div
+                  onMouseOver={() => setSixthWorkHover(true)}
+                  onMouseOut={() => setSixthWorkHover(false)}
+                  onClick={handleSixthWorkClicked}
+                  className={
+                    sixthWorkHover
+                      ? "h-[2.532rem] text-[#64ffda] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px] bg-[#172a45]"
+                      : sixthWorkClicked
+                      ? "h-[2.532rem] text-[#64ffda] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px] bg-[#172a45]"
+                      : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px]"
+                  }
+                >
+                  MansolHab
+                </div>
+                {/* SevenOvn */}
+                <div
+                  onMouseOver={() => setSeventhWorkHover(true)}
+                  onMouseOut={() => setSeventhWorkHover(false)}
+                  onClick={handleSeventhWorkClicked}
+                  className={
+                    seventhWorkHover
+                      ? "h-[2.532rem] text-[#64ffda] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px] bg-[#172a45]"
+                      : seventhWorkClicked
                       ? "h-[2.532rem] text-[#64ffda] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px] bg-[#172a45]"
                       : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer pl-[8.25px]"
                   }
@@ -374,55 +482,48 @@ const Work = ({ experienceBtnClickedActive }) => {
                   {/* For firstWork */}
                   <div>
                     <div className="text-[#ccd6f6] font-calibri text-[20px] antialiased leading-[1] pb-[10px]">
-                      Trainer{" "}
+                      AI Intern (Machine Learning Track){" "}
                       <span className="antialiased text-[#64ffda]">@</span>
                       <span className="antialiased text-[#64ffda] relative">
                         <a
-                          href="#"
+                          href="https://www.linkedin.com/posts/abdullah-sultan-923883254_flyrankai-machinelearning-artificialintelligence-share-7476164788205633536-D3ar/"
+                          target="_blank"
                           className="viewArchive"
                         >
-                          iCodeGuru
+                          FlyRank AI
                         </a>
                       </span>
                     </div>
                     <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased">
-                      Feb 2026 - present · Silicon Valley USA (Remote)
+                      Jul 2026 - Present · Illinois Chicago, Remote
+                    </div>
+                    <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased mt-1">
+                      <span className="text-[#ccd6f6]">Team Lead:</span>{" "}
+                      <a
+                        href="https://www.linkedin.com/in/alenm/"
+                        target="_blank"
+                        className="viewArchive"
+                      >
+                        Alen Malkoc
+                      </a>
                     </div>
 
                     <div className="pt-[2.3rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
                       <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
                       <div className="leading-[1.22rem]">
-                        As a Python Trainer at iCodeGuru, I mentor aspiring developers in mastering Data Structures & Algorithms with a strong focus on problem-solving patterns and interview readiness.
+                        Engineered end-to-end ML workflows using Python, pandas, and scikit-learn to clean complex datasets and extract high-value features for NLP pipelines.
                       </div>
                     </div>
                     <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
                       <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
                       <div className="leading-[1.22rem]">
-                        Teaching Python for Data Structures & Algorithms (DSA)
+                        Developed and evaluated predictive models using sentence-transformers and HDBSCAN; delivered capstone project with actionable insights and recommendations reviewed by program mentors.
                       </div>
                     </div>
                     <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
                       <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
                       <div className="leading-[1.22rem]">
-                        Breaking down complex problems into structured, pattern-based solutions
-                      </div>
-                    </div>
-                    <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
-                      <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
-                      <div className="leading-[1.22rem]">
-                        Training students on how to approach coding interview questions strategically
-                      </div>
-                    </div>
-                    <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
-                      <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
-                      <div className="leading-[1.22rem]">
-                        Guiding learners in analyzing Time and Space Complexity (Big-O analysis)
-                      </div>
-                    </div>
-                    <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
-                      <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
-                      <div className="leading-[1.22rem]">
-                        Conducting live coding sessions and mock interview practices
+                        Implemented clustering and embedding-based approaches for semantic understanding of unstructured text data in domain-specific contexts.
                       </div>
                     </div>
                   </div>
@@ -432,6 +533,101 @@ const Work = ({ experienceBtnClickedActive }) => {
               {secondWorkClicked && (
                 <div className="blink_me">
                   {/* For secondWork */}
+                  <div className="text-[#ccd6f6] font-calibri text-[20px] antialiased leading-[1] pb-[10px]">
+                    Trainer{" "}
+                    <span className="antialiased text-[#64ffda]">@</span>
+                    <span className="antialiased text-[#64ffda] relative">
+                      <a
+                        href="#"
+                        className="viewArchive"
+                      >
+                        iCodeGuru
+                      </a>
+                    </span>
+                  </div>
+                  <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased">
+                    Feb 2026 - present · Silicon Valley USA (Remote)
+                  </div>
+
+                  <div className="pt-[2.3rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                    <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                    <div className="leading-[1.22rem]">
+                      As a Python Trainer at iCodeGuru, I mentor aspiring developers in mastering Data Structures & Algorithms with a strong focus on problem-solving patterns and interview readiness.
+                    </div>
+                  </div>
+                  <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                    <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                    <div className="leading-[1.22rem]">
+                      Teaching Python for Data Structures & Algorithms (DSA)
+                    </div>
+                  </div>
+                  <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                    <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                    <div className="leading-[1.22rem]">
+                      Breaking down complex problems into structured, pattern-based solutions
+                    </div>
+                  </div>
+                  <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                    <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                    <div className="leading-[1.22rem]">
+                      Training students on how to approach coding interview questions strategically
+                    </div>
+                  </div>
+                  <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                    <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                    <div className="leading-[1.22rem]">
+                      Guiding learners in analyzing Time and Space Complexity (Big-O analysis)
+                    </div>
+                  </div>
+                  <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                    <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                    <div className="leading-[1.22rem]">
+                      Conducting live coding sessions and mock interview practices
+                    </div>
+                  </div>
+                </div>
+              )}
+              {/* Third One */}
+              {thirdWorkClicked && (
+                <div className="blink_me">
+                  <div className="text-[#ccd6f6] font-calibri text-[20px] antialiased leading-[1] pb-[10px]">
+                    Software Engineer (Contract){" "}
+                    <span className="antialiased text-[#64ffda]">@</span>
+                    <span className="antialiased text-[#64ffda] relative">
+                      <a
+                        href="https://www.panabotics.com/"
+                        target="_blank"
+                        className="viewArchive"
+                      >
+                        Panabotics
+                      </a>
+                    </span>
+                  </div>
+                  <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased">
+                    Mar 2026 - May 2026 · Remote
+                  </div>
+                  <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased mt-1">
+                    <span className="text-[#ccd6f6]">Co-Lead:</span>{" "}
+                    <a
+                      href="https://www.linkedin.com/in/farhan-ai-developer/"
+                      target="_blank"
+                      className="viewArchive"
+                    >
+                      Farhan Ali
+                    </a>
+                  </div>
+
+                  <div className="pt-[2.3rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                    <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                    <div className="leading-[1.22rem]">
+                      Built PanaPDF, a PDF utility web app using Next.js, implementing OCR, AI-powered summarization, and text extraction, now serving users across 10+ countries and still growing.
+                    </div>
+                  </div>
+                </div>
+              )}
+              {/* Fourth One */}
+              {fourthWorkClicked && (
+                <div className="blink_me">
                   <div className="text-[#ccd6f6] font-calibri text-[20px] antialiased leading-[1.4rem] pb-[10px]">
                     Tech Lead – AI Safety Systems{" "}
                     <span className="antialiased text-[#64ffda]">@</span>
@@ -477,10 +673,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                   </div>
                 </div>
               )}
-              {/* Third One */}
-              {thirdWorkClicked && (
+              {/* Fifth One */}
+              {fifthWorkClicked && (
                 <div className="blink_me">
-                  {/* For thirdWork */}
                   <div className="text-[#ccd6f6] font-calibri leading-[1.2] text-[20px] antialiased">
                     Associate Software Engineer{" "}
                     <span className="antialiased text-[#64ffda]">@</span>
@@ -544,10 +739,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                   </div>
                 </div>
               )}
-              {/* Fourth One */}
-              {fourthWorkClicked && (
+              {/* Sixth One */}
+              {sixthWorkClicked && (
                 <div className="blink_me">
-                  {/* For fourthWork */}
                   <div className="text-[#ccd6f6] leading-[1.2] font-calibri text-[20px] antialiased cursor-default">
                     Web Dev Trainer{" "}
                     <span className="antialiased text-[#64ffda]">@</span>
@@ -602,10 +796,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                   </div>
                 </div>
               )}
-              {/* Fifth One */}
-              {fifthWorkClicked && (
+              {/* Seventh One */}
+              {seventhWorkClicked && (
                 <div className="blink_me">
-                  {/* For fifthWork */}
                   <div className="text-[#ccd6f6] leading-[1.2] font-calibri text-[20px] antialiased cursor-default">
                     Full Stack Developer{" "}
                     <span className="antialiased text-[#64ffda]">@</span>
@@ -670,7 +863,7 @@ const Work = ({ experienceBtnClickedActive }) => {
                   onScroll={handleScroll}
                   className="flex smallScreenWorkWidth mb-[30px] border-b-[2px] border-[#303c55] z-0 overflow-x-scroll relative"
                 >
-                  {/* iCodeGuru */}
+                  {/* FlyRank AI */}
                   <div
                     onClick={handleFirstWorkClicked}
                     className={
@@ -679,9 +872,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                         : "h-[2.532rem] text-[#8892b0] text-[13px] flex flex-wrap items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
                     }
                   >
-                    iCodeGuru
+                    FlyRank AI
                   </div>
-                  {/* Sinohydro */}
+                  {/* iCodeGuru */}
                   <div
                     onClick={handleSecondWorkClicked}
                     className={
@@ -690,9 +883,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                         : "h-[2.532rem] text-[#8892b0] text-[13px] flex flex-wrap items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
                     }
                   >
-                    Sinohydro
+                    iCodeGuru
                   </div>
-                  {/* Gigalabs */}
+                  {/* Panabotics */}
                   <div
                     onClick={handleThirdWorkClicked}
                     className={
@@ -701,9 +894,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                         : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
                     }
                   >
-                    Gigalabs
+                    Panabotics
                   </div>
-                  {/* MansolHab */}
+                  {/* Sinohydro */}
                   <div
                     onClick={handleFourthWorkClicked}
                     className={
@@ -712,13 +905,35 @@ const Work = ({ experienceBtnClickedActive }) => {
                         : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
                     }
                   >
-                    MansolHab
+                    Sinohydro
                   </div>
-                  {/* SevenOvn */}
+                  {/* Gigalabs */}
                   <div
                     onClick={handleFifthWorkClicked}
                     className={
                       fifthWorkClicked
+                        ? "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer bg-[#172a45] whitespace-nowrap px-[15px] w-[100%]"
+                        : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
+                    }
+                  >
+                    Gigalabs
+                  </div>
+                  {/* MansolHab */}
+                  <div
+                    onClick={handleSixthWorkClicked}
+                    className={
+                      sixthWorkClicked
+                        ? "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer bg-[#172a45] whitespace-nowrap px-[15px] w-[100%]"
+                        : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
+                    }
+                  >
+                    MansolHab
+                  </div>
+                  {/* SevenOvn */}
+                  <div
+                    onClick={handleSeventhWorkClicked}
+                    className={
+                      seventhWorkClicked
                         ? "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer bg-[#172a45] whitespace-nowrap px-[15px] w-[100%]"
                         : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
                     }
@@ -729,8 +944,8 @@ const Work = ({ experienceBtnClickedActive }) => {
                   <div 
                     className="absolute bottom-0 h-[3px] bg-[#64ffda] transition-all duration-300 ease-in-out workScreen9:hidden"
                     style={{
-                      left: `${mobileActiveTab * 20}%`,
-                      width: 'calc(20% - 2px)',
+                      left: `${mobileActiveTab * (100/7)}%`,
+                      width: 'calc(100%/7 - 2px)',
                     }}
                   />
                 </div>
@@ -744,7 +959,7 @@ const Work = ({ experienceBtnClickedActive }) => {
               {/* Companies Names*/}
               <div className="flex">
                 <div className="flex mb-[30px] border-b-[2px] border-[#303c55] z-0 relative">
-                  {/* iCodeGuru */}
+                  {/* FlyRank AI */}
                   <div
                     onClick={handleFirstWorkClicked}
                     className={
@@ -753,9 +968,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                         : "h-[2.532rem] text-[#8892b0] text-[13px] flex flex-wrap items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
                     }
                   >
-                    iCodeGuru
+                    FlyRank AI
                   </div>
-                  {/* Sinohydro */}
+                  {/* iCodeGuru */}
                   <div
                     onClick={handleSecondWorkClicked}
                     className={
@@ -764,9 +979,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                         : "h-[2.532rem] text-[#8892b0] text-[13px] flex flex-wrap items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
                     }
                   >
-                    Sinohydro
+                    iCodeGuru
                   </div>
-                  {/* Gigalabs */}
+                  {/* Panabotics */}
                   <div
                     onClick={handleThirdWorkClicked}
                     className={
@@ -775,9 +990,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                         : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
                     }
                   >
-                    Gigalabs
+                    Panabotics
                   </div>
-                  {/* MansolHab */}
+                  {/* Sinohydro */}
                   <div
                     onClick={handleFourthWorkClicked}
                     className={
@@ -786,13 +1001,35 @@ const Work = ({ experienceBtnClickedActive }) => {
                         : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
                     }
                   >
-                    MansolHab
+                    Sinohydro
                   </div>
-                  {/* SevenOvn */}
+                  {/* Gigalabs */}
                   <div
                     onClick={handleFifthWorkClicked}
                     className={
                       fifthWorkClicked
+                        ? "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer bg-[#172a45] whitespace-nowrap px-[15px] w-[100%]"
+                        : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
+                    }
+                  >
+                    Gigalabs
+                  </div>
+                  {/* MansolHab */}
+                  <div
+                    onClick={handleSixthWorkClicked}
+                    className={
+                      sixthWorkClicked
+                        ? "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer bg-[#172a45] whitespace-nowrap px-[15px] w-[100%]"
+                        : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
+                    }
+                  >
+                    MansolHab
+                  </div>
+                  {/* SevenOvn */}
+                  <div
+                    onClick={handleSeventhWorkClicked}
+                    className={
+                      seventhWorkClicked
                         ? "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer bg-[#172a45] whitespace-nowrap px-[15px] w-[100%]"
                         : "h-[2.532rem] text-[#8892b0] text-[13px] flex items-center font-customMono antialiased cursor-pointer whitespace-nowrap px-[15px] w-[100%]"
                     }
@@ -803,8 +1040,8 @@ const Work = ({ experienceBtnClickedActive }) => {
                   <div 
                     className="absolute bottom-0 h-[3px] bg-[#64ffda] transition-all duration-300 ease-in-out"
                     style={{
-                      left: `${mobileActiveTab * 20}%`,
-                      width: 'calc(20% - 2px)',
+                      left: `${mobileActiveTab * (100/7)}%`,
+                      width: 'calc(100%/7 - 2px)',
                     }}
                   />
                 </div>
@@ -820,55 +1057,48 @@ const Work = ({ experienceBtnClickedActive }) => {
                 {/* For firstWork */}
                 <div>
                   <div className="text-[#ccd6f6] font-calibri text-[20px] antialiased leading-[1] pb-[10px]">
-                    Trainer{" "}
+                    AI Intern (Machine Learning Track){" "}
                     <span className="antialiased text-[#64ffda]">@</span>
                     <span className="antialiased text-[#64ffda] relative">
                       <a
-                        href="#"
+                        href="https://www.linkedin.com/posts/abdullah-sultan-923883254_flyrankai-machinelearning-artificialintelligence-share-7476164788205633536-D3ar/"
+                        target="_blank"
                         className="viewArchive"
                       >
-                        iCodeGuru
+                        FlyRank AI
                       </a>
                     </span>
                   </div>
                   <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased">
-                    Feb 2026 - present · Silicon Valley USA (Remote)
+                    Jul 2026 - Present · Illinois Chicago, Remote
+                  </div>
+                  <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased mt-1">
+                    <span className="text-[#ccd6f6]">Team Lead:</span>{" "}
+                    <a
+                      href="https://www.linkedin.com/in/alenm/"
+                      target="_blank"
+                      className="viewArchive"
+                    >
+                      Alen Malkoc
+                    </a>
                   </div>
 
                   <div className="pt-[2.3rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
                     <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
                     <div className="leading-[1.22rem]">
-                      As a Python Trainer at iCodeGuru, I mentor aspiring developers in mastering Data Structures & Algorithms with a strong focus on problem-solving patterns and interview readiness.
+                      Engineered end-to-end ML workflows using Python, pandas, and scikit-learn to clean complex datasets and extract high-value features for NLP pipelines.
                     </div>
                   </div>
                   <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
                     <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
                     <div className="leading-[1.22rem]">
-                      Teaching Python for Data Structures & Algorithms (DSA)
+                      Developed and evaluated predictive models using sentence-transformers and HDBSCAN; delivered capstone project with actionable insights and recommendations reviewed by program mentors.
                     </div>
                   </div>
                   <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
                     <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
                     <div className="leading-[1.22rem]">
-                      Breaking down complex problems into structured, pattern-based solutions
-                    </div>
-                  </div>
-                  <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
-                    <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
-                    <div className="leading-[1.22rem]">
-                      Training students on how to approach coding interview questions strategically
-                    </div>
-                  </div>
-                  <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
-                    <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
-                    <div className="leading-[1.22rem]">
-                      Guiding learners in analyzing Time and Space Complexity (Big-O analysis)
-                    </div>
-                  </div>
-                  <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
-                    <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
-                    <div className="leading-[1.22rem]">
-                      Conducting live coding sessions and mock interview practices
+                      Implemented clustering and embedding-based approaches for semantic understanding of unstructured text data in domain-specific contexts.
                     </div>
                   </div>
                 </div>
@@ -877,7 +1107,101 @@ const Work = ({ experienceBtnClickedActive }) => {
             {/* Second One */}
             {secondWorkClicked && (
               <div className="blink_me">
-                {/* For secondWork */}
+                <div className="text-[#ccd6f6] font-calibri text-[20px] antialiased leading-[1] pb-[10px]">
+                  Trainer{" "}
+                  <span className="antialiased text-[#64ffda]">@</span>
+                  <span className="antialiased text-[#64ffda] relative">
+                    <a
+                      href="#"
+                      className="viewArchive"
+                    >
+                      iCodeGuru
+                    </a>
+                  </span>
+                </div>
+                <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased">
+                  Feb 2026 - present · Silicon Valley USA (Remote)
+                </div>
+
+                <div className="pt-[2.3rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                  <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                  <div className="leading-[1.22rem]">
+                    As a Python Trainer at iCodeGuru, I mentor aspiring developers in mastering Data Structures & Algorithms with a strong focus on problem-solving patterns and interview readiness.
+                  </div>
+                </div>
+                <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                  <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                  <div className="leading-[1.22rem]">
+                    Teaching Python for Data Structures & Algorithms (DSA)
+                  </div>
+                </div>
+                <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                  <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                  <div className="leading-[1.22rem]">
+                    Breaking down complex problems into structured, pattern-based solutions
+                  </div>
+                </div>
+                <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                  <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                  <div className="leading-[1.22rem]">
+                    Training students on how to approach coding interview questions strategically
+                  </div>
+                </div>
+                <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                  <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                  <div className="leading-[1.22rem]">
+                    Guiding learners in analyzing Time and Space Complexity (Big-O analysis)
+                  </div>
+                </div>
+                <div className="pt-[1rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                  <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                  <div className="leading-[1.22rem]">
+                    Conducting live coding sessions and mock interview practices
+                  </div>
+                </div>
+              </div>
+            )}
+            {/* Third One */}
+            {thirdWorkClicked && (
+              <div className="blink_me">
+                <div className="text-[#ccd6f6] font-calibri text-[20px] antialiased leading-[1] pb-[10px]">
+                  Software Engineer (Contract){" "}
+                  <span className="antialiased text-[#64ffda]">@</span>
+                  <span className="antialiased text-[#64ffda] relative">
+                    <a
+                      href="https://www.panabotics.com/"
+                      target="_blank"
+                      className="viewArchive"
+                    >
+                      Panabotics
+                    </a>
+                  </span>
+                </div>
+                <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased">
+                  Mar 2026 - May 2026 · Remote
+                </div>
+                <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased mt-1">
+                  <span className="text-[#ccd6f6]">Co-Lead:</span>{" "}
+                  <a
+                    href="https://www.linkedin.com/in/farhan-ai-developer/"
+                    target="_blank"
+                    className="viewArchive"
+                  >
+                    Farhan Ali
+                  </a>
+                </div>
+
+                <div className="pt-[2.3rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
+                  <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
+                  <div className="leading-[1.22rem]">
+                    Built PanaPDF, a PDF utility web app using Next.js, implementing OCR, AI-powered summarization, and text extraction, now serving users across 10+ countries and still growing.
+                  </div>
+                </div>
+              </div>
+            )}
+            {/* Fourth One */}
+            {fourthWorkClicked && (
+              <div className="blink_me">
                 <div className="text-[#ccd6f6] font-calibri text-[20px] antialiased leading-[1.4rem] pb-[10px]">
                   Tech Lead – AI Safety Systems{" "}
                   <span className="antialiased text-[#64ffda]">@</span>
@@ -923,10 +1247,9 @@ const Work = ({ experienceBtnClickedActive }) => {
                 </div>
               </div>
             )}
-            {/* Third One */}
-            {thirdWorkClicked && (
+            {/* Fifth One */}
+            {fifthWorkClicked && (
               <div className="blink_me">
-                {/* For thirdWork */}
                 <div className="text-[#ccd6f6] font-calibri leading-[1.2] text-[20px] antialiased">
                   Associate Software Engineer{" "}
                   <span className="antialiased text-[#64ffda]">@</span>
@@ -989,11 +1312,10 @@ const Work = ({ experienceBtnClickedActive }) => {
                   </div>
                 </div>
               </div>
-            )}
-            {/* Fourth One */}
-            {fourthWorkClicked && (
+              )}
+            {/* Sixth One */}
+            {sixthWorkClicked && (
               <div className="blink_me">
-                {/* For fourthWork */}
                 <div className="text-[#ccd6f6] leading-[1.2] font-calibri text-[20px] antialiased cursor-default">
                   Web Dev Trainer{" "}
                   <span className="antialiased text-[#64ffda]">@</span>
@@ -1047,11 +1369,10 @@ const Work = ({ experienceBtnClickedActive }) => {
                   </div>
                 </div>
               </div>
-            )}
-            {/* Fifth One */}
-            {fifthWorkClicked && (
+              )}
+            {/* Seventh One */}
+            {seventhWorkClicked && (
               <div className="blink_me">
-                {/* For fifthWork */}
                 <div className="text-[#ccd6f6] leading-[1.2] font-calibri text-[20px] antialiased cursor-default">
                   Full Stack Developer{" "}
                   <span className="antialiased text-[#64ffda]">@</span>

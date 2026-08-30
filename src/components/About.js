@@ -144,156 +144,179 @@ const About = ({ aboutBtnClickedActive }) => {
           </div>
           {/* Technologies - Box Style */}
           <div className="w-full">
-            {/* Languages & Version Control */}
+            {/* Programming */}
             <div className="mb-4 p-3 border border-[#303c55] rounded">
               <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                Languages & Version Control
+                Programming
               </div>
               <div className="text-[#8892b0] flex flex-wrap">
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> JavaScript (ES6+)
+                  <span className="text-[#64ffda]">▹</span> JavaScript
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> TypeScript
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Java
                 </div>
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> Python
                 </div>
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> C Language
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> C++ (OOP + DSA)
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Git
+                  <span className="text-[#64ffda]">▹</span> C++
                 </div>
               </div>
             </div>
-            {/* AI & Machine Learning */}
+            {/* Frontend */}
             <div className="mb-4 p-3 border border-[#303c55] rounded">
               <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                AI & Machine Learning
+                Frontend
               </div>
               <div className="text-[#8892b0] flex flex-wrap">
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> TensorFlow
+                  <span className="text-[#64ffda]">▹</span> React
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Next.js
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Bootstrap
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Tailwind CSS
+                </div>
+              </div>
+            </div>
+            {/* Backend */}
+            <div className="mb-4 p-3 border border-[#303c55] rounded">
+              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
+                Backend
+              </div>
+              <div className="text-[#8892b0] flex flex-wrap">
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Node.js
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Express.js
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> MongoDB
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Firebase
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> REST APIs
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> FastAPI
+                </div>
+              </div>
+            </div>
+            {/* AI/ML and Agents */}
+            <div className="mb-4 p-3 border border-[#303c55] rounded">
+              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
+                AI/ML and Agents
+              </div>
+              <div className="text-[#8892b0] flex flex-wrap">
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> LangChain
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> LangGraph
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> OpenAI SDK
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> RAG
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> LLMs
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Generative AI
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Agentic AI
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Vector DBs
+                </div>
+              </div>
+            </div>
+            {/* Data Science */}
+            <div className="mb-4 p-3 border border-[#303c55] rounded">
+              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
+                Data Science
+              </div>
+              <div className="text-[#8892b0] flex flex-wrap">
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> NumPy
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Pandas
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Matplotlib
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> scikit-learn
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Sentence-Transformers
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> HDBSCAN
+                </div>
+              </div>
+            </div>
+            {/* Computer Vision */}
+            <div className="mb-4 p-3 border border-[#303c55] rounded">
+              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
+                Computer Vision
+              </div>
+              <div className="text-[#8892b0] flex flex-wrap">
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> YOLOv5/v8
                 </div>
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> PyTorch
                 </div>
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> OpenAI (GPT-4/GPT-4o)
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> LangChain
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> LlamaIndex
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Hugging Face
+                  <span className="text-[#64ffda]">▹</span> TensorFlow
                 </div>
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> OpenCV
                 </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> YOLOv5/YOLOv8
-                </div>
               </div>
             </div>
-            {/* Web Frameworks & Libraries */}
+            {/* Tools */}
             <div className="mb-4 p-3 border border-[#303c55] rounded">
               <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                Web Frameworks & Libraries
+                Tools
               </div>
               <div className="text-[#8892b0] flex flex-wrap">
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> React Js
+                  <span className="text-[#64ffda]">▹</span> VS Code
                 </div>
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Node.js
+                  <span className="text-[#64ffda]">▹</span> IntelliJ IDEA
                 </div>
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Expressjs
+                  <span className="text-[#64ffda]">▹</span> Git
                 </div>
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> FastAPI
+                  <span className="text-[#64ffda]">▹</span> GitHub
                 </div>
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Redux DevTool
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Tailwind CSS
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Bootstrap 5
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> HTML5
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> CSS3, SCSS
+                  <span className="text-[#64ffda]">▹</span> Postman
                 </div>
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> Docker
                 </div>
-              </div>
-            </div>
-            {/* Databases */}
-            <div className="mb-4 p-3 border border-[#303c55] rounded">
-              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                Databases
-              </div>
-              <div className="text-[#8892b0] flex flex-wrap">
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> MongoDB
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> MySQL
-                </div>
-              </div>
-            </div>
-            {/* Cloud & DevOps */}
-            <div className="mb-4 p-3 border border-[#303c55] rounded">
-              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                Cloud & DevOps
-              </div>
-              <div className="text-[#8892b0] flex flex-wrap">
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> AWS
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Azure
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Cloudflare
-                </div>
-              </div>
-            </div>
-            {/* IDEs & Tools */}
-            <div className="mb-4 p-3 border border-[#303c55] rounded">
-              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                IDEs & Tools
-              </div>
-              <div className="text-[#8892b0] flex flex-wrap">
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Visual Studio Code
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Visual Studio
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Anaconda
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Jupyter Notebook
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Google Colab
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Android Studio
-                </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Linux
+                  <span className="text-[#64ffda]">▹</span> Streamlit
                 </div>
               </div>
             </div>
@@ -347,156 +370,179 @@ const About = ({ aboutBtnClickedActive }) => {
           </div>
           {/* Technologies - Box Style Desktop */}
           <div className="w-full">
-            {/* Languages & Version Control */}
+            {/* Programming */}
             <div className="mb-4 p-3 border border-[#303c55] rounded">
               <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                Languages & Version Control
+                Programming
               </div>
               <div className="text-[#8892b0] flex flex-wrap">
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> JavaScript (ES6+)
+                  <span className="text-[#64ffda]">▹</span> JavaScript
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> TypeScript
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Java
                 </div>
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> Python
                 </div>
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> C Language
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> C++ (OOP + DSA)
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Git
+                  <span className="text-[#64ffda]">▹</span> C++
                 </div>
               </div>
             </div>
-            {/* AI & Machine Learning */}
+            {/* Frontend */}
             <div className="mb-4 p-3 border border-[#303c55] rounded">
               <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                AI & Machine Learning
+                Frontend
               </div>
               <div className="text-[#8892b0] flex flex-wrap">
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> TensorFlow
+                  <span className="text-[#64ffda]">▹</span> React
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Next.js
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Bootstrap
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Tailwind CSS
+                </div>
+              </div>
+            </div>
+            {/* Backend */}
+            <div className="mb-4 p-3 border border-[#303c55] rounded">
+              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
+                Backend
+              </div>
+              <div className="text-[#8892b0] flex flex-wrap">
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Node.js
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Express.js
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> MongoDB
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Firebase
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> REST APIs
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> FastAPI
+                </div>
+              </div>
+            </div>
+            {/* AI/ML and Agents */}
+            <div className="mb-4 p-3 border border-[#303c55] rounded">
+              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
+                AI/ML and Agents
+              </div>
+              <div className="text-[#8892b0] flex flex-wrap">
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> LangChain
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> LangGraph
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> OpenAI SDK
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> RAG
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> LLMs
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Generative AI
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Agentic AI
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Vector DBs
+                </div>
+              </div>
+            </div>
+            {/* Data Science */}
+            <div className="mb-4 p-3 border border-[#303c55] rounded">
+              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
+                Data Science
+              </div>
+              <div className="text-[#8892b0] flex flex-wrap">
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> NumPy
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Pandas
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Matplotlib
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> scikit-learn
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Sentence-Transformers
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> HDBSCAN
+                </div>
+              </div>
+            </div>
+            {/* Computer Vision */}
+            <div className="mb-4 p-3 border border-[#303c55] rounded">
+              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
+                Computer Vision
+              </div>
+              <div className="text-[#8892b0] flex flex-wrap">
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> YOLOv5/v8
                 </div>
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> PyTorch
                 </div>
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> OpenAI (GPT-4/GPT-4o)
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> LangChain
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> LlamaIndex
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Hugging Face
+                  <span className="text-[#64ffda]">▹</span> TensorFlow
                 </div>
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> OpenCV
                 </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> YOLOv5/YOLOv8
-                </div>
               </div>
             </div>
-            {/* Web Frameworks & Libraries */}
+            {/* Tools */}
             <div className="mb-4 p-3 border border-[#303c55] rounded">
               <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                Web Frameworks & Libraries
+                Tools
               </div>
               <div className="text-[#8892b0] flex flex-wrap">
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> React Js
+                  <span className="text-[#64ffda]">▹</span> VS Code
                 </div>
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Node.js
+                  <span className="text-[#64ffda]">▹</span> IntelliJ IDEA
                 </div>
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Expressjs
+                  <span className="text-[#64ffda]">▹</span> Git
                 </div>
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> FastAPI
+                  <span className="text-[#64ffda]">▹</span> GitHub
                 </div>
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Redux DevTool
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Tailwind CSS
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Bootstrap 5
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> HTML5
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> CSS3, SCSS
+                  <span className="text-[#64ffda]">▹</span> Postman
                 </div>
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> Docker
                 </div>
-              </div>
-            </div>
-            {/* Databases */}
-            <div className="mb-4 p-3 border border-[#303c55] rounded">
-              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                Databases
-              </div>
-              <div className="text-[#8892b0] flex flex-wrap">
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> MongoDB
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> MySQL
-                </div>
-              </div>
-            </div>
-            {/* Cloud & DevOps */}
-            <div className="mb-4 p-3 border border-[#303c55] rounded">
-              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                Cloud & DevOps
-              </div>
-              <div className="text-[#8892b0] flex flex-wrap">
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> AWS
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Azure
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Cloudflare
-                </div>
-              </div>
-            </div>
-            {/* IDEs & Tools */}
-            <div className="mb-4 p-3 border border-[#303c55] rounded">
-              <div className="text-[#64ffda] font-customMono text-[13px] antialiased mb-2">
-                IDEs & Tools
-              </div>
-              <div className="text-[#8892b0] flex flex-wrap">
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Visual Studio Code
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Visual Studio
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Anaconda
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Jupyter Notebook
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Google Colab
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Android Studio
-                </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> Linux
+                  <span className="text-[#64ffda]">▹</span> Streamlit
                 </div>
               </div>
             </div>

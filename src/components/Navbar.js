@@ -20,36 +20,40 @@ const Navbar = ({
   const [showDiv, setShowDiv] = useState(false);
   const [showSecondDiv, setShowSecondDiv] = useState(true);
   const [aboutMouseHover, setAboutMouseOver] = useState(false);
+  const [educationMouseHover, setEducationMouseOver] = useState(false);
   const [expMouseHover, setExpMouseOver] = useState(false);
+  const [researchMouseHover, setResearchMouseOver] = useState(false);
   const [workMouseHover, setWorkMouseOver] = useState(false);
   const [contactMouseHover, setContactMouseOver] = useState(false);
   const [resumeMouseHover, setResumeMouseOver] = useState(false);
   const [resumeBtnClicked, setResumeBtnClicked] = useState(false);
   const [aboutBtnSm, setAboutBtnSm] = useState(false);
+  const [educationBtnSm, setEducationBtnSm] = useState(false);
   const [experienceBtnSm, setExperienceBtnSm] = useState(false);
+  const [researchBtnSm, setResearchBtnSm] = useState(false);
   const [workBtnSm, setWorkBtnSm] = useState(false);
   const [contactBtnSm, setContactBtnSm] = useState(false);
 
   const divStyle = secondCondition
     ? {
-        width: "100%",
-        paddingTop: "0.5rem",
-        zIndex: "60",
-        transform: removeTransform ? null : `translateY(${window.scrollY}px)`,
-        boxShadow: "0 10px 30px -15px rgba(2, 12, 27, 0.7)",
-        marginTop: "-15px",
-        ...newStyles,
-        transition: "top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
-        top: `${scrollHeight}px`,
-      }
+      width: "100%",
+      paddingTop: "0.5rem",
+      zIndex: "60",
+      transform: removeTransform ? null : `translateY(${window.scrollY}px)`,
+      boxShadow: "0 10px 30px -15px rgba(2, 12, 27, 0.7)",
+      marginTop: "-15px",
+      ...newStyles,
+      transition: "top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
+      top: `${scrollHeight}px`,
+    }
     : window.scrollY > 300
-    ? {
+      ? {
         transform: "translateY(-56px)",
         zIndex: "60",
         transition: "all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
         top: "0px",
       }
-    : null;
+      : null;
 
   const ToggleClass = () => {
     if (isActive && isOffScreen) {
@@ -220,10 +224,24 @@ const Navbar = ({
     }
   };
 
+  const handleEducationButtonClick = () => {
+    const el = document.getElementById("EDUCATIONDIV");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleExperienceButtonClick = () => {
     setExperienceBtnClickedActive(true);
     if (window.location.pathname !== "/") {
       window.location.href = "/";
+    }
+  };
+
+  const handleResearchButtonClick = () => {
+    const el = document.getElementById("RESEARCHDIV");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -391,9 +409,8 @@ const Navbar = ({
                     <button
                       id="aboutShowDiv"
                       onClick={handleAboutButtonClick}
-                      className={`oneDescription  flex  justify-center  items-center w-[100%]  ${
-                        aboutBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
-                      }  bg-[#172a45]  py-2  text-lg  tracking-wide antialiased`}
+                      className={`oneDescription  flex  justify-center  items-center w-[100%]  ${aboutBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                        }  bg-[#172a45]  py-2  text-lg  tracking-wide antialiased`}
                     >
                       About
                     </button>
@@ -402,37 +419,54 @@ const Navbar = ({
                       02.
                     </div>
                     <button
-                      onClick={handleExperienceButtonClick}
-                      className={`twoDescription  flex  justify-center  items-center  w-[100%]  ${
-                        experienceBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
-                      }  bg-[#172a45]  py-2  text-lg  tracking-wide antialiased`}
+                      onClick={handleEducationButtonClick}
+                      className={`twoDescription  flex  justify-center  items-center  w-[100%]  ${educationBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                        }  bg-[#172a45]  py-2  text-lg  tracking-wide antialiased`}
                     >
-                      Experience
+                      Education
                     </button>
                     <div className="three  mt-4  flex  justify-center  items-center  bg-[#172a45]  text-[#64ffda]  w-[100%]  text-base antialiased">
                       03.
                     </div>
                     <button
-                      onClick={handleWorkButtonClick}
-                      className={`threeDescription  flex  justify-center  items-center  w-[100%]  ${
-                        workBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
-                      }  bg-[#172a45]   py-2  text-lg  tracking-wide antialiased`}
+                      onClick={handleResearchButtonClick}
+                      className={`threeDescription  flex  justify-center  items-center  w-[100%]  ${researchBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                        }  bg-[#172a45]   py-2  text-lg  tracking-wide antialiased`}
                     >
-                      Work
+                      Research
                     </button>
                     <div className="four  mt-4  flex  justify-center  items-center  bg-[#172a45]  text-[#64ffda]  w-[100%]  text-base antialiased">
                       04.
                     </div>
                     <button
+                      onClick={handleExperienceButtonClick}
+                      className={`fourDescription  flex  justify-center  items-center  w-[100%]  ${experienceBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                        }  bg-[#172a45]  py-2  text-lg  tracking-wide antialiased`}
+                    >
+                      Experience
+                    </button>
+                    <div className="five  mt-4  flex  justify-center  items-center  bg-[#172a45]  text-[#64ffda]  w-[100%]  text-base antialiased">
+                      05.
+                    </div>
+                    <button
+                      onClick={handleWorkButtonClick}
+                      className={`fiveDescription  flex  justify-center  items-center  w-[100%]  ${workBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                        }  bg-[#172a45]   py-2  text-lg  tracking-wide antialiased`}
+                    >
+                      Work
+                    </button>
+                    <div className="six  mt-4  flex  justify-center  items-center  bg-[#172a45]  text-[#64ffda]  w-[100%]  text-base antialiased">
+                      06.
+                    </div>
+                    <button
                       onClick={handleContactButtonClick}
-                      className={`fourDescription  flex  justify-center  items-center  w-[100%]  ${
-                        contactBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
-                      }  bg-[#172a45]  text-lg  py-2  tracking-wide antialiased`}
+                      className={`sixDescription  flex  justify-center  items-center  w-[100%]  ${contactBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                        }  bg-[#172a45]  text-lg  py-2  tracking-wide antialiased`}
                     >
                       Contact
                     </button>
                     <a
-                      href="https://drive.google.com/file/d/1Tf3bvphzUZLD-n4SrnzhR68h_oivKuU1/view?usp=drive_link"
+                      href="https://drive.google.com/file/d/1996CmPsxr4QkH3X7au8r1lLX73dNx7Ki/view?usp=drive_link"
                       className="py-[18px] px-[50px] flex  justify-center  items-center  mt-[4rem]  bg-[#172a45] border  border-[#64ffda]  rounded  font-mono  text-[#64ffda]  tracking-wide cursor-pointer antialiased"
                     >
                       Resume
@@ -574,9 +608,8 @@ const Navbar = ({
                     handleAboutSmClicked();
                     handleAboutButtonClick();
                   }}
-                  className={`oneDescription  flex  justify-center  items-center w-[100%]  ${
-                    aboutBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
-                  }  bg-[#172a45]  py-2  text-lg  tracking-wide antialiased`}
+                  className={`oneDescription  flex  justify-center  items-center w-[100%]  ${aboutBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                    }  bg-[#172a45]  py-2  text-lg  tracking-wide antialiased`}
                 >
                   About
                 </button>
@@ -585,45 +618,66 @@ const Navbar = ({
                 </div>
                 <button
                   onClick={() => {
-                    handleexperienceSmClciked();
-                    handleExperienceButtonClick();
+                    handleEducationButtonClick();
                   }}
-                  className={`twoDescription  flex  justify-center  items-center  w-[100%]  ${
-                    experienceBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
-                  }  bg-[#172a45]  py-2  text-lg  tracking-wide antialiased`}
+                  className={`twoDescription  flex  justify-center  items-center  w-[100%]  ${educationBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                    }  bg-[#172a45]  py-2  text-lg  tracking-wide antialiased`}
                 >
-                  Experience
+                  Education
                 </button>
                 <div className="three  mt-4  flex  justify-center  items-center  bg-[#172a45]  text-[#64ffda]  w-[100%]  text-base antialiased">
                   03.
                 </div>
                 <button
                   onClick={() => {
-                    handleWorkSmClicked();
-                    handleWorkButtonClick();
+                    handleResearchButtonClick();
                   }}
-                  className={`threeDescription  flex  justify-center  items-center  w-[100%]  ${
-                    workBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
-                  }  bg-[#172a45]   py-2  text-lg  tracking-wide antialiased`}
+                  className={`threeDescription  flex  justify-center  items-center  w-[100%]  ${researchBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                    }  bg-[#172a45]   py-2  text-lg  tracking-wide antialiased`}
                 >
-                  Work
+                  Research
                 </button>
                 <div className="four  mt-4  flex  justify-center  items-center  bg-[#172a45]  text-[#64ffda]  w-[100%]  text-base antialiased">
                   04.
                 </div>
                 <button
                   onClick={() => {
+                    handleexperienceSmClciked();
+                    handleExperienceButtonClick();
+                  }}
+                  className={`fourDescription  flex  justify-center  items-center  w-[100%]  ${experienceBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                    }  bg-[#172a45]  py-2  text-lg  tracking-wide antialiased`}
+                >
+                  Experience
+                </button>
+                <div className="five  mt-4  flex  justify-center  items-center  bg-[#172a45]  text-[#64ffda]  w-[100%]  text-base antialiased">
+                  05.
+                </div>
+                <button
+                  onClick={() => {
+                    handleWorkSmClicked();
+                    handleWorkButtonClick();
+                  }}
+                  className={`fiveDescription  flex  justify-center  items-center  w-[100%]  ${workBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                    }  bg-[#172a45]   py-2  text-lg  tracking-wide antialiased`}
+                >
+                  Work
+                </button>
+                <div className="six  mt-4  flex  justify-center  items-center  bg-[#172a45]  text-[#64ffda]  w-[100%]  text-base antialiased">
+                  06.
+                </div>
+                <button
+                  onClick={() => {
                     handleContactSmClicked();
                     handleContactButtonClick();
                   }}
-                  className={`fourDescription  flex  justify-center  items-center  w-[100%]  ${
-                    contactBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
-                  }  bg-[#172a45]  text-lg  py-2  tracking-wide antialiased`}
+                  className={`sixDescription  flex  justify-center  items-center  w-[100%]  ${contactBtnSm ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                    }  bg-[#172a45]  text-lg  py-2  tracking-wide antialiased`}
                 >
                   Contact
                 </button>
                 <a
-                  href="https://drive.google.com/file/d/1Tf3bvphzUZLD-n4SrnzhR68h_oivKuU1/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1996CmPsxr4QkH3X7au8r1lLX73dNx7Ki/view?usp=drive_link"
                   className="py-[18px] px-[50px] flex  justify-center  items-center  mt-[4rem]  bg-[#172a45] border  border-[#64ffda]  rounded  font-mono  text-[#64ffda]  tracking-wide cursor-pointer antialiased"
                 >
                   Resume
@@ -736,10 +790,42 @@ const Navbar = ({
                   </span>
                 </div>
                 <span
-                  id="experienceLarge"
+                  id="educationLarge"
                   className="text-[13px] p-[10px] no-underline transition-whereIWorkedTransitionProperty duration-whereIWorkedTransitionDuration ease-whereIWorkedTransitionTiming cursor-pointer mr-[10px] font-customMono myScreen5:px-[5px]"
                 >
                   <span className="text-[#64ffda] mr-[3px]">02.</span>
+                  <span
+                    onClick={handleEducationButtonClick}
+                    onMouseOver={() => setEducationMouseOver(true)}
+                    onMouseOut={() => setEducationMouseOver(false)}
+                    className={
+                      educationMouseHover ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                    }
+                  >
+                    Education
+                  </span>
+                </span>
+                <span
+                  id="researchLarge"
+                  className="text-[13px] p-[10px] no-underline transition-whereIWorkedTransitionProperty duration-whereIWorkedTransitionDuration ease-whereIWorkedTransitionTiming cursor-pointer mr-[10px] font-customMono myScreen5:px-[5px]"
+                >
+                  <span className="text-[#64ffda] mr-[3px]">03.</span>
+                  <span
+                    onClick={handleResearchButtonClick}
+                    onMouseOver={() => setResearchMouseOver(true)}
+                    onMouseOut={() => setResearchMouseOver(false)}
+                    className={
+                      researchMouseHover ? "text-[#64ffda]" : "text-[#ccd6f6]"
+                    }
+                  >
+                    Research
+                  </span>
+                </span>
+                <span
+                  id="experienceLarge"
+                  className="text-[13px] p-[10px] no-underline transition-whereIWorkedTransitionProperty duration-whereIWorkedTransitionDuration ease-whereIWorkedTransitionTiming cursor-pointer mr-[10px] font-customMono myScreen5:px-[5px]"
+                >
+                  <span className="text-[#64ffda] mr-[3px]">04.</span>
                   <span
                     onClick={handleExperienceButtonClick}
                     onMouseOver={() => setExpMouseOver(true)}
@@ -755,7 +841,7 @@ const Navbar = ({
                   id="workLarge"
                   className="text-[13px] p-[10px] no-underline transition-whereIWorkedTransitionProperty duration-whereIWorkedTransitionDuration ease-whereIWorkedTransitionTiming cursor-pointer mr-[10px] font-customMono myScreen5:px-[5px]"
                 >
-                  <span className="text-[#64ffda] mr-[3px]">03.</span>
+                  <span className="text-[#64ffda] mr-[3px]">05.</span>
                   <span
                     onClick={handleWorkButtonClick}
                     onMouseOver={() => setWorkMouseOver(true)}
@@ -771,7 +857,7 @@ const Navbar = ({
                   id="contactLarge"
                   className="text-[13px] p-[10px] no-underline transition-whereIWorkedTransitionProperty duration-whereIWorkedTransitionDuration ease-whereIWorkedTransitionTiming cursor-pointer mr-[10px] font-customMono myScreen5:px-[5px]"
                 >
-                  <span className="text-[#64ffda] mr-[3px]">04.</span>
+                  <span className="text-[#64ffda] mr-[3px]">06.</span>
                   <span
                     onClick={handleContactButtonClick}
                     onMouseOver={() => setContactMouseOver(true)}
@@ -784,7 +870,7 @@ const Navbar = ({
                   </span>
                 </span>
                 <a
-                  href="https://drive.google.com/file/d/1Tf3bvphzUZLD-n4SrnzhR68h_oivKuU1/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1996CmPsxr4QkH3X7au8r1lLX73dNx7Ki/view?usp=drive_link"
                   onClick={() => {
                     setResumeBtnClicked(true);
                   }}
@@ -794,8 +880,8 @@ const Navbar = ({
                     resumeBtnClicked
                       ? "py-[10px] px-[25px] mr-4 flex  justify-center  items-center ml-[5px] bg-headerBtnColor border  border-[#64ffda]  rounded  font-mono  text-[#64ffda] cursor-pointer antialiased leading-[1]"
                       : resumeMouseHover
-                      ? "py-[10px] px-[25px] mr-4 flex  justify-center  items-center ml-[5px] bg-headerBtnColor border  border-[#64ffda]  rounded  font-mono  text-[#64ffda] cursor-pointer antialiased leading-[1]"
-                      : "py-[10px] px-[25px] mr-4 flex  justify-center  items-center ml-[5px] bg-transparent border  border-[#64ffda]  rounded  font-mono  text-[#64ffda] cursor-pointer antialiased leading-[1]"
+                        ? "py-[10px] px-[25px] mr-4 flex  justify-center  items-center ml-[5px] bg-headerBtnColor border  border-[#64ffda]  rounded  font-mono  text-[#64ffda] cursor-pointer antialiased leading-[1]"
+                        : "py-[10px] px-[25px] mr-4 flex  justify-center  items-center ml-[5px] bg-transparent border  border-[#64ffda]  rounded  font-mono  text-[#64ffda] cursor-pointer antialiased leading-[1]"
                   }
                 >
                   Resume

@@ -5,8 +5,11 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
 import Work from "./components/Work";
+import ResearchExperience from "./components/ResearchExperience";
 import ThingsBuilt from "./components/ThingsBuilt";
 import OtherProjects from "./components/OtherProjects";
+import EducationAchievements from "./components/EducationAchievements";
+import References from "./components/References";
 import GetInTouch from "./components/GetInTouch";
 import Logos from "./components/Logos";
 import Loader from "./components/loader/Loader";
@@ -43,9 +46,12 @@ function App() {
               />
               <Header />
               <About aboutBtnClickedActive={aboutBtnClickedActive} />
+              <EducationAchievements />
+              <ResearchExperience />
               <Work experienceBtnClickedActive={experienceBtnClickedActive} />
               <ThingsBuilt workBtnClickedActive={workBtnClickedActive} />
               <OtherProjects />
+              <References />
               <GetInTouch contactBtnClickedActive={contactBtnClickedActive} />
               <Logos />
             </Fragment>
