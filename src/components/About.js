@@ -162,9 +162,6 @@ const About = ({ aboutBtnClickedActive }) => {
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> Python
                 </div>
-                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> C++
-                </div>
               </div>
             </div>
             {/* Frontend */}
@@ -317,6 +314,9 @@ const About = ({ aboutBtnClickedActive }) => {
                 </div>
                 <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> Streamlit
+                </div>
+                <div className="w-[45%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Redis
                 </div>
               </div>
             </div>
@@ -388,9 +388,6 @@ const About = ({ aboutBtnClickedActive }) => {
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> Python
                 </div>
-                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
-                  <span className="text-[#64ffda]">▹</span> C++
-                </div>
               </div>
             </div>
             {/* Frontend */}
@@ -543,6 +540,9 @@ const About = ({ aboutBtnClickedActive }) => {
                 </div>
                 <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
                   <span className="text-[#64ffda]">▹</span> Streamlit
+                </div>
+                <div className="w-[30%] font-customMono text-[13px] antialiased pr-4">
+                  <span className="text-[#64ffda]">▹</span> Redis
                 </div>
               </div>
             </div>
