@@ -18,3 +18,5 @@ yarn-error.log*
 *.swo
 *~
 .cache
+build_output.txt
+build_errors.txt
