@@ -3,6 +3,7 @@ import "../Css_applied/otherProjectsStyles.css";
 
 const OtherProjects = () => {
   const [firstBoxGithubSvg, setFirstBoxGithubSvg] = useState(false);
+  const [thirdBoxLinkSvg, setThirdBoxLinkSvg] = useState(false);
 
   // Displaying content after show time
 
@@ -86,6 +87,34 @@ const OtherProjects = () => {
     if (isVisibleTwo) {
       setTimeout(() => {
         setSecondProjectVisible(true);
+      }, 200);
+    }
+  });
+
+  // Third Project Appear when Displayed
+  const [isVisibleThree, setIsVisibleThree] = useState(false);
+  const [thirdProjectVisible, setThirdProjectVisible] = useState(false);
+  const refThirdProject = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisibleThree(true);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+    observer.observe(refThirdProject.current);
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisibleThree) {
+      setTimeout(() => {
+        setThirdProjectVisible(true);
       }, 200);
     }
   });
@@ -232,6 +261,75 @@ const OtherProjects = () => {
           {/* Footer */}
           <div className="h-[15%] mt-[10px] text-[#8892b0] text-[12px] font-calibri bg-[#172a45] flex items-end opScreen2:items-center opScreen3:h-[10%] opScreen5:mt-[23px] opScreen6:h-[13%] opScreen13:h-[22%] opScreen13:items-center opScreen14:mt-[15px] opScreen16:h-[6%] opScreen16:mt-[40px] opScreen17:mt-[20px]">
             Mongodb, Express.js, React.js, Node.js
+          </div>
+        </div>
+        {/* Third Project Box - MansolHab */}
+        <div
+          ref={refThirdProject}
+          className={`contentContainer otherProjectBox ${
+            thirdProjectVisible ? "show" : ""
+          } w-[48%] relative py-8 px-7 rounded bg-[#172a45] mt-4 transition-all duration-250 ease-in-out top-0 opScreen6:w-[32%] opScreen7:w-[48%] opScreen9:w-[31%] opScreen13:w-[100%]`}
+        >
+          {/* Header Box */}
+          <div className="w-[100%] h-10 bg-[#172a45] flex justify-between items-center">
+            {/* Folder SVG */}
+            <div className="h-[40px] w-[40px] text-[#64ffda]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="#172a45"
+                stroke="currentColor"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="feather feather-folder"
+                style={{ backgroundColor: "#172a45" }}
+              >
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            {/* External Link SVG */}
+            <div
+              onMouseOver={() => setThirdBoxLinkSvg(true)}
+              onMouseOut={() => setThirdBoxLinkSvg(false)}
+              className="w-[30px] h-[30px] py-[5px] px-[7px] text-[#a8b2d1] bg-[#172a45]"
+            >
+              <a
+                href="https://mansolhab.com"
+                target="_blank"
+                aria-label="External Link"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  fill="#172a45"
+                  stroke={thirdBoxLinkSvg ? "#64ffda" : "currentColor"}
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-external-link"
+                  style={{ backgroundColor: "#172a45" }}
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          {/* Title  */}
+          <div className="h-[20%] mt-8 bg-[#172a45] antialiased text-[#ccd6f6] text-[22px] font-calibri font-semibold leading-[1.1] opScreen3:h-[13%] opScreen5:h-[20%] opScreen6:h-[19%] opScreen7:h-[14%] opScreen13:h-[12%] opScreen14:mt-[22px] opScreen21:h-[18%] opScreen33:mt-[35px]">
+            MansolHab
+          </div>
+          {/* Description */}
+          <div className="h-[40%] mt-[10px] bg-[#172a45] antialiased text-[17px] text-[#a8b2d1] font-calibri leading-[1.3] opScreen5:h-[32%] opScreen6:h-[35%] opScreen7:h-[35%] opScreen13:h-[30%] opScreen16:mt-[30px] opScreen17:h-[44%] opScreen33:mt-[25px]">
+            A production used web application (Wordpress) for UK based training center in Pakistan
+          </div>
+          {/* Footer */}
+          <div className="h-[15%] mt-[10px] text-[#8892b0] text-[12px] font-calibri bg-[#172a45] flex items-end opScreen2:items-center opScreen3:h-[10%] opScreen5:mt-[23px] opScreen6:h-[13%] opScreen13:h-[22%] opScreen13:items-center opScreen14:mt-[15px] opScreen16:h-[6%] opScreen16:mt-[40px] opScreen17:mt-[20px]">
+            WordPress, PHP
           </div>
         </div>
       </div>
