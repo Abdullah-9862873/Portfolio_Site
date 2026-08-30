@@ -538,7 +538,8 @@ const Work = ({ experienceBtnClickedActive }) => {
                     <span className="antialiased text-[#64ffda]">@</span>
                     <span className="antialiased text-[#64ffda] relative">
                       <a
-                        href="#"
+                        href="https://www.youtube.com/live/vcIuG2vGQOM"
+                        target="_blank"
                         className="viewArchive"
                       >
                         iCodeGuru
@@ -632,13 +633,23 @@ const Work = ({ experienceBtnClickedActive }) => {
                     Tech Lead – AI Safety Systems{" "}
                     <span className="antialiased text-[#64ffda]">@</span>
                     <span className="antialiased text-[#64ffda] relative">
-                      <a href="#" className="viewArchive">
+                      <a href="https://www.linkedin.com/posts/abdullah-sultan-923883254_ai-aiengineering-careergrowth-activity-7431451490751238144-HEJF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7HAWsBmg3oAJTMJWVyQuwjSu7lx7fGylw" target="_blank" className="viewArchive">
                       Sinohydro Corporation
                       </a>
                     </span>
                   </div>
                     <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased">
                       Feb 2025 - Jan 2026 · Jubail, Saudi Arabia (On-site)
+                    </div>
+                    <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased mt-1">
+                      <span className="text-[#ccd6f6]">Supervisor:</span>{" "}
+                      <a
+                        href="https://www.linkedin.com/in/furqan-sabir-83a55282/"
+                        target="_blank"
+                        className="viewArchive"
+                      >
+                        Furqan Sabir
+                      </a>
                     </div>
 
                   <div className="mt-[2.3rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
@@ -680,13 +691,23 @@ const Work = ({ experienceBtnClickedActive }) => {
                     Associate Software Engineer{" "}
                     <span className="antialiased text-[#64ffda]">@</span>
                     <span className="antialiased text-[#64ffda] relative">
-                      <a href="#" className="viewArchive">
+                      <a href="https://www.linkedin.com/posts/abdullah-sultan-923883254_gratitude-careergrowth-newbeginnings-activity-7274489022075310080-iC0d?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7HAWsBmg3oAJTMJWVyQuwjSu7lx7fGylw" target="_blank" className="viewArchive">
                         Gigalabs Pvt Ltd
                       </a>
                     </span>
                   </div>
                   <div className="pt-[7px] text-[#a8b2d1] inline-block font-customMono text-[13px] antialiased">
                     Mar 2024 - Nov 2024 · JoharTown, Lahore, Pakistan (On-site)
+                  </div>
+                  <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased mt-1">
+                    <span className="text-[#ccd6f6]">CEO:</span>{" "}
+                    <a
+                      href="https://www.linkedin.com/in/kamran-azmat-7a050a115/"
+                      target="_blank"
+                      className="viewArchive"
+                    >
+                      Kamran Azmat
+                    </a>
                   </div>
 
                   <div className="pt-[1.5rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
@@ -746,7 +767,7 @@ const Work = ({ experienceBtnClickedActive }) => {
                     Web Dev Trainer{" "}
                     <span className="antialiased text-[#64ffda]">@</span>
                     <span className="antialiased text-[#64ffda] relative">
-                      <a className="viewArchive">MansolHab</a>
+                      <a href="https://mansolhab.com" target="_blank" className="viewArchive">MansolHab</a>
                     </span>
                   </div>
                   <div className="text-[#a8b2d1] pt-[7px] font-customMono text-[13px] antialiased">
@@ -803,11 +824,21 @@ const Work = ({ experienceBtnClickedActive }) => {
                     Full Stack Developer{" "}
                     <span className="antialiased text-[#64ffda]">@</span>
                     <span className="antialiased text-[#64ffda] relative">
-                      <a href="https://sevenovn.com/" className="viewArchive">SevenOvn</a>
+                        <a href="https://www.linkedin.com/in/abdullah-sultan-923883254/details/experience/" target="_blank" className="viewArchive">SevenOvn</a>
                     </span>
                   </div>
                   <div className="text-[#a8b2d1] pt-[7px] font-customMono text-[13px] antialiased">
                     Sept 2022 - Aug 2023 · JoharTown, Lahore, Pakistan (Hybrid)
+                  </div>
+                  <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased mt-1">
+                    <span className="text-[#ccd6f6]">CEO:</span>{" "}
+                    <a
+                      href="https://www.linkedin.com/in/humza-rajput/"
+                      target="_blank"
+                      className="viewArchive"
+                    >
+                      Hamza Tayyab
+                    </a>
                   </div>
                   <div className="pt-[2.3rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
                     <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
@@ -1112,7 +1143,8 @@ const Work = ({ experienceBtnClickedActive }) => {
                   <span className="antialiased text-[#64ffda]">@</span>
                   <span className="antialiased text-[#64ffda] relative">
                     <a
-                      href="#"
+                      href="https://www.youtube.com/live/vcIuG2vGQOM"
+                      target="_blank"
                       className="viewArchive"
                     >
                       iCodeGuru
@@ -1206,13 +1238,23 @@ const Work = ({ experienceBtnClickedActive }) => {
                   Tech Lead – AI Safety Systems{" "}
                   <span className="antialiased text-[#64ffda]">@</span>
                   <span className="antialiased text-[#64ffda] relative">
-                    <a href="#" className="viewArchive">
+                    <a href="https://www.linkedin.com/posts/abdullah-sultan-923883254_ai-aiengineering-careergrowth-activity-7431451490751238144-HEJF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7HAWsBmg3oAJTMJWVyQuwjSu7lx7fGylw" target="_blank" className="viewArchive">
                     Sinohydro Corporation
                     </a>
                   </span>
                 </div>
                   <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased">
                     Feb 2025 - Jan 2026 · Jubail, Saudi Arabia (On-site)
+                  </div>
+                  <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased mt-1">
+                    <span className="text-[#ccd6f6]">Supervisor:</span>{" "}
+                    <a
+                      href="https://www.linkedin.com/in/furqan-sabir-83a55282/"
+                      target="_blank"
+                      className="viewArchive"
+                    >
+                      Furqan Sabir
+                    </a>
                   </div>
 
                 <div className="mt-[2.3rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
@@ -1254,13 +1296,23 @@ const Work = ({ experienceBtnClickedActive }) => {
                   Associate Software Engineer{" "}
                   <span className="antialiased text-[#64ffda]">@</span>
                   <span className="antialiased text-[#64ffda] relative">
-                    <a href="#" className="viewArchive">
+                    <a href="https://www.linkedin.com/posts/abdullah-sultan-923883254_gratitude-careergrowth-newbeginnings-activity-7274489022075310080-iC0d?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7HAWsBmg3oAJTMJWVyQuwjSu7lx7fGylw" target="_blank" className="viewArchive">
                       Gigalabs Pvt Ltd
                     </a>
                   </span>
                 </div>
                 <div className="pt-[7px] text-[#a8b2d1] inline-block font-customMono text-[13px] antialiased">
                   Mar 2024 - Nov 2024 · JoharTown, Lahore, Pakistan (On-site)
+                </div>
+                <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased mt-1">
+                  <span className="text-[#ccd6f6]">CEO:</span>{" "}
+                  <a
+                    href="https://www.linkedin.com/in/kamran-azmat-7a050a115/"
+                    target="_blank"
+                    className="viewArchive"
+                  >
+                    Kamran Azmat
+                  </a>
                 </div>
 
                 <div className="pt-[1.5rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
@@ -1320,7 +1372,7 @@ const Work = ({ experienceBtnClickedActive }) => {
                   Web Dev Trainer{" "}
                   <span className="antialiased text-[#64ffda]">@</span>
                   <span className="antialiased text-[#64ffda] relative">
-                    <a className="viewArchive">MansolHab</a>
+                    <a href="https://mansolhab.com" target="_blank" className="viewArchive">MansolHab</a>
                   </span>
                 </div>
                 <div className="text-[#a8b2d1] pt-[7px] font-customMono text-[13px] antialiased">
@@ -1377,11 +1429,21 @@ const Work = ({ experienceBtnClickedActive }) => {
                   Full Stack Developer{" "}
                   <span className="antialiased text-[#64ffda]">@</span>
                   <span className="antialiased text-[#64ffda] relative">
-                    <a href="https://sevenovn.com/" className="viewArchive">SevenOvn</a>
+                    <a href="https://www.linkedin.com/in/abdullah-sultan-923883254/details/experience/" target="_blank" className="viewArchive">SevenOvn</a>
                   </span>
                 </div>
                 <div className="text-[#a8b2d1] pt-[7px] font-customMono text-[13px] antialiased">
                   Sept 2022 - Aug 2023 · JoharTown, Lahore, Pakistan (Hybrid)
+                </div>
+                <div className="text-[#a8b2d1] font-customMono text-[13px] antialiased mt-1">
+                  <span className="text-[#ccd6f6]">CEO:</span>{" "}
+                  <a
+                    href="https://www.linkedin.com/in/humza-rajput/"
+                    target="_blank"
+                    className="viewArchive"
+                  >
+                    Hamza Tayyab
+                  </a>
                 </div>
                 <div className="pt-[2.3rem] text-[#8892b0] font-calibri text-[18px] antialiased flex">
                   <div className="text-[#64ffda] pr-[1rem]">▹</div>{" "}
