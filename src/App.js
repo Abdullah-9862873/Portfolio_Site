@@ -13,6 +13,7 @@ import References from "./components/References";
 import GetInTouch from "./components/GetInTouch";
 import Logos from "./components/Logos";
 import Loader from "./components/loader/Loader";
+import "./Css_applied/animatedUnderline.css";
 
 function App() {
   const [showLoader, setShowLoader] = useState(true);

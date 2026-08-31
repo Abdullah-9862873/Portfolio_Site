@@ -1,0 +1,22 @@
+/* Shared animated underline for all text links across the site */
+.viewArchive {
+  display: inline-block;
+  position: relative;
+}
+
+.viewArchive::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #64ffda;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.viewArchive:hover::after {
+  transform: scaleX(1);
+}

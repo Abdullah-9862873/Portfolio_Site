@@ -71,7 +71,7 @@ const ResearchExperience = () => {
               href="https://scholar.google.nl/citations?user=d_j5Pg4AAAAJ&hl=nl"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#64ffda] hover:underline"
+              className="text-[#64ffda] viewArchive"
             >
               Prof. R. Weber
             </a>
@@ -80,7 +80,7 @@ const ResearchExperience = () => {
               href="https://scholar.google.com/citations?user=UNL2osUAAAAJ&hl=en"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#64ffda] hover:underline"
+              className="text-[#64ffda] viewArchive"
             >
               M. Malik
             </a>

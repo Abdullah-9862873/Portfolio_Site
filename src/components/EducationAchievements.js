@@ -86,31 +86,31 @@ const EducationAchievements = () => {
             <ul className="list-none space-y-3">
               <li className="relative pl-6 text-[#a8b2d1] text-[15px] font-calibri leading-relaxed">
                 <span className="absolute left-0 top-0 text-[#64ffda]">&#9654;</span>
-                Completed <a href="https://certificates.cs50.io/566e3a4c-1473-42e6-9dd7-98bcb3d552f6.pdf?size=letter" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">Harvard University's CS50x</a> Puzzle Day with a perfect 9/9 score, ranking among the <b className="text-[#ccd6f6]">top teams worldwide</b>
+                Completed <a href="https://certificates.cs50.io/566e3a4c-1473-42e6-9dd7-98bcb3d552f6.pdf?size=letter" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">Harvard University's CS50x</a> Puzzle Day with a perfect 9/9 score, ranking among the <b className="text-[#ccd6f6]">top teams worldwide</b>
               </li>
               <li className="relative pl-6 text-[#a8b2d1] text-[15px] font-calibri leading-relaxed">
                 <span className="absolute left-0 top-0 text-[#64ffda]">&#9654;</span>
-                Selected as a <a href="https://digitalcredential.stanford.edu/check/252735118E37E7B5496F921A1143518F9F373B543A45B633A9C03AA0B6752357ZUdicW5vcDdKK0l0bzVDNGZYOHkwb01zY1FUZ0pjZ0VPc3hwY0liaTBtcmhCSFN0" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">Section Leader (Teacher)</a> in <b className="text-[#ccd6f6]">Stanford University's</b> Code in Place Program among <b className="text-[#ccd6f6]">20,000+ applicants</b>, serving alongside 900 Section Leaders
+                Selected as a <a href="https://digitalcredential.stanford.edu/check/252735118E37E7B5496F921A1143518F9F373B543A45B633A9C03AA0B6752357ZUdicW5vcDdKK0l0bzVDNGZYOHkwb01zY1FUZ0pjZ0VPc3hwY0liaTBtcmhCSFN0" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">Section Leader (Teacher)</a> in <b className="text-[#ccd6f6]">Stanford University's</b> Code in Place Program among <b className="text-[#ccd6f6]">20,000+ applicants</b>, serving alongside 900 Section Leaders
               </li>
               <li className="relative pl-6 text-[#a8b2d1] text-[15px] font-calibri leading-relaxed">
                 <span className="absolute left-0 top-0 text-[#64ffda]">&#9654;</span>
-                Selected for the <b className="text-[#ccd6f6]">first batch of interns</b> at <a href="https://www.linkedin.com/posts/abdullah-sultan-923883254_flyrankai-machinelearning-artificialintelligence-share-7476164788205633536-D3ar/" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">FlyRank AI</a> (Illinois Chicago, Remote) in the Machine Learning Engineering track (AI/ML)
+                Selected for the <b className="text-[#ccd6f6]">first batch of interns</b> at <a href="https://www.linkedin.com/posts/abdullah-sultan-923883254_flyrankai-machinelearning-artificialintelligence-share-7476164788205633536-D3ar/" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">FlyRank AI</a> (Illinois Chicago, Remote) in the Machine Learning Engineering track (AI/ML)
               </li>
               <li className="relative pl-6 text-[#a8b2d1] text-[15px] font-calibri leading-relaxed">
                 <span className="absolute left-0 top-0 text-[#64ffda]">&#9654;</span>
-                Participated in international hackathons hosted by <a href="https://lablab.ai/u/@Abdullah9862873/ai-hackathons/openclaw-surge-hackathon/certificate" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">Lablab.ai</a> and <a href="https://devpost.com/ag9862873" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">Devpost</a>, contributing innovative ideas to AI/ML-focused challenges
+                Participated in international hackathons hosted by <a href="https://lablab.ai/u/@Abdullah9862873/ai-hackathons/openclaw-surge-hackathon/certificate" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">Lablab.ai</a> and <a href="https://devpost.com/ag9862873" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">Devpost</a>, contributing innovative ideas to AI/ML-focused challenges
               </li>
               <li className="relative pl-6 text-[#a8b2d1] text-[15px] font-calibri leading-relaxed">
                 <span className="absolute left-0 top-0 text-[#64ffda]">&#9654;</span>
-                Ranked in the <b className="text-[#ccd6f6]">top 6.5%</b> of LeetCoders | Solved <a href="https://leetcode.com/u/Abdullah9862873/" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">180+ LeetCode Problems</a>
+                Ranked in the <b className="text-[#ccd6f6]">top 6.5%</b> of LeetCoders | Solved <a href="https://leetcode.com/u/Abdullah9862873/" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">180+ LeetCode Problems</a>
               </li>
               <li className="relative pl-6 text-[#a8b2d1] text-[15px] font-calibri leading-relaxed">
                 <span className="absolute left-0 top-0 text-[#64ffda]">&#9654;</span>
-                Achieved <b className="text-[#ccd6f6]">7.0 Bands</b> in <a href="https://drive.google.com/file/d/1FzsPy6j_X1gBv7hswPQ4ozDynG2OMUeb/view" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">IELTS</a> (CEFR C1) (L: 7.5, R: 7.5, W: 6.5, S: 6.5)
+                Achieved <b className="text-[#ccd6f6]">7.0 Bands</b> in <a href="https://drive.google.com/file/d/1FzsPy6j_X1gBv7hswPQ4ozDynG2OMUeb/view" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">IELTS</a> (CEFR C1) (L: 7.5, R: 7.5, W: 6.5, S: 6.5)
               </li>
               <li className="relative pl-6 text-[#a8b2d1] text-[15px] font-calibri leading-relaxed">
                 <span className="absolute left-0 top-0 text-[#64ffda]">&#9654;</span>
-                Completed all 50 stars of <a href="https://github.com/Abdullah-9862873/Advent_of_Code" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">Advent of Code 2024</a> | Demonstrated consistent problem-solving across 25 days
+                Completed all 50 stars of <a href="https://github.com/Abdullah-9862873/Advent_of_Code" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">Advent of Code 2024</a> | Demonstrated consistent problem-solving across 25 days
               </li>
               <li className="relative pl-6 text-[#a8b2d1] text-[15px] font-calibri leading-relaxed">
                 <span className="absolute left-0 top-0 text-[#64ffda]">&#9654;</span>
@@ -127,11 +127,11 @@ const EducationAchievements = () => {
             <ul className="list-none space-y-3">
               <li className="relative pl-6 text-[#a8b2d1] text-[15px] font-calibri leading-relaxed">
                 <span className="absolute left-0 top-0 text-[#64ffda]">&#9654;</span>
-                <a href="https://www.coursera.org/account/accomplishments/specialization/PVKPUG4LWEMB" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">IBM AI Engineering Specialization</a> &nbsp;|&nbsp; IBM &nbsp;|&nbsp; Apr 2026
+                <a href="https://www.coursera.org/account/accomplishments/specialization/PVKPUG4LWEMB" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">IBM AI Engineering Specialization</a> &nbsp;|&nbsp; IBM &nbsp;|&nbsp; Apr 2026
               </li>
               <li className="relative pl-6 text-[#a8b2d1] text-[15px] font-calibri leading-relaxed">
                 <span className="absolute left-0 top-0 text-[#64ffda]">&#9654;</span>
-                <a href="https://www.linkedin.com/in/abdullah-sultan-923883254/details/certifications/" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">Big Data and Data Science with Hadoop Eco Cloud System</a> &nbsp;|&nbsp; Arfa Karim Foundation, Pakistan &nbsp;|&nbsp; Sept 2021
+                <a href="https://www.linkedin.com/in/abdullah-sultan-923883254/details/certifications/" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">Big Data and Data Science with Hadoop Eco Cloud System</a> &nbsp;|&nbsp; Arfa Karim Foundation, Pakistan &nbsp;|&nbsp; Sept 2021
               </li>
             </ul>
           </div>
@@ -146,9 +146,9 @@ const EducationAchievements = () => {
                 <span className="absolute left-0 top-0 text-[#64ffda]">&#9654;</span>
                 <b className="text-[#ccd6f6]">Invited Speaker</b> &nbsp;|&nbsp; Superior University, Lahore, Pakistan &nbsp;|&nbsp; Feb 2026
                 <br />
-                Panel with <a href="https://pk.linkedin.com/company/deepvision.ai" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">DeepVision AI</a> leadership team — Presented on production automation workflows built with n8n, covering how internal automations can be packaged and sold as standalone systems globally.
+                Panel with <a href="https://pk.linkedin.com/company/deepvision.ai" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">DeepVision AI</a> leadership team — Presented on production automation workflows built with n8n, covering how internal automations can be packaged and sold as standalone systems globally.
                 <br />
-                <a href="https://www.facebook.com/SuperiorOEC/posts/pfbid0KHw7A5AYhQVUHAta97qDeE8HWV4r8foXb6Mgs85znjMY439g6qjMiNNMdEURqqhYl" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] hover:underline">View on Facebook</a>
+                <a href="https://www.facebook.com/SuperiorOEC/posts/pfbid0KHw7A5AYhQVUHAta97qDeE8HWV4r8foXb6Mgs85znjMY439g6qjMiNNMdEURqqhYl" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] viewArchive">View on Facebook</a>
               </li>
             </ul>
           </div>

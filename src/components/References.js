@@ -98,7 +98,7 @@ const References = () => {
                 <ul className="bg-transparent list-none space-y-1.5">
                   <li className="bg-transparent text-[#a8b2d1] text-[14px] font-calibri">
                     <span className="bg-transparent text-[#8892b0]">Email:</span>{" "}
-                    <a href={`mailto:${ref.email}`} className="bg-transparent text-[#64ffda] hover:underline">
+                    <a href={`mailto:${ref.email}`} className="bg-transparent text-[#64ffda] viewArchive">
                       {ref.email}
                     </a>
                   </li>
@@ -121,7 +121,7 @@ const References = () => {
                             href={profile.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-transparent text-[#64ffda] hover:underline"
+                            className="bg-transparent text-[#64ffda] viewArchive"
                           >
                             {profile.label}
                           </a>

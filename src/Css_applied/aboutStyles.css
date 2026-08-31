@@ -9,17 +9,23 @@
     transform: translateY(0);
 }
 
-.spanOneHoverClass:after {
+.spanOneHoverClass {
+  display: inline-block;
+  position: relative;
+}
+.spanOneHoverClass::after {
     content: "";
     position: absolute;
-    bottom: 2px;
+    bottom: -2px;
     left: 0;
-    width: 0;
-    height: 0.5px;
+    width: 100%;
+    height: 1px;
     background-color: #64ffda;
-    transition: all 0.25s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.spanOneHoverClass:hover:after {
-    width: 100%;
+.spanOneHoverClass:hover::after {
+    transform: scaleX(1);
 }
